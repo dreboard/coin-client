@@ -2,35 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fba17d0-72e0-41e4-8552-82c28c82e194" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env.testing" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Helpers/CoinHelper.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/coins.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/back/coins/add.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/partials/side_nav.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/sections/coins.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/coins-client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/coins-client.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2b131879-bdea-4a70-8f85-0993a4dab92b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2b131879-bdea-4a70-8f85-0993a4dab92b.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2b131879-bdea-4a70-8f85-0993a4dab92b/storage_v2/_src_/schema/coins-test.fXNJ3w.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2b131879-bdea-4a70-8f85-0993a4dab92b/storage_v2/_src_/schema/coins-test.fXNJ3w.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CoinController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CoinController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/CoinRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/CoinRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.phar" beforeDir="false" afterPath="$PROJECT_DIR$/composer.phar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/back/coins/by_year.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/coins/by_year.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/back/coins/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/coins/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/back/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/back/types/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/types/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,6 +175,7 @@
       <path value="$PROJECT_DIR$/vendor/krlove/code-generator" />
       <path value="$PROJECT_DIR$/vendor/xethron/laravel-4-generators" />
       <path value="$PROJECT_DIR$/vendor/xethron/migrations-generator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
     </include_path>
   </component>
   <component name="ProjectId" id="1PlbKh7HaCZFCWoBfROQ96a8dlS" />
@@ -311,7 +285,7 @@
       <workItem from="1577340355279" duration="2169000" />
       <workItem from="1577469108453" duration="589000" />
       <workItem from="1577677744345" duration="469000" />
-      <workItem from="1577678248289" duration="639000" />
+      <workItem from="1577678248289" duration="828000" />
     </task>
     <servers />
   </component>
