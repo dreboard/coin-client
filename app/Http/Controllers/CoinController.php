@@ -78,4 +78,30 @@ class CoinController extends Controller
 
     }
 
+    public function add($id)
+    {
+        try{
+            $coin = $this->coinRepository->getCoin($id);
+            $coins = $this->coinRepository->getCoins($id);
+            $varieties = $this->coinRepository->getCoinVarieties($id);
+            $subTypes = $this->coinRepository->getSubTypes($id);
+            //dd($subTypes);
+            $typeLink = str_replace(' ', '_', $coin[0]->coinType);
+            $varietyList = $this->coinRepository->listCoinVarieties($id);
+            $distinctVarieties = $this->coinRepository->getCoinDistinctVarieties($id);
+            return view('back.coins.add', [
+                'coin' => $coin,
+                'coins' => $coins,
+                'varieties' => $varieties,
+                'typeLink' =>  $typeLink,
+                'subTypes' =>  $subTypes,
+                'varietyList' =>  $varietyList,
+                'distinctVarieties' =>  $distinctVarieties,
+            ]);
+        }catch (Throwable $e){
+            Log::error($e->getMessage());
+            return redirect('home')->with('status', 'Your request is not valid');
+        }
+    }
+
 }

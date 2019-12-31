@@ -26,7 +26,3 @@ Route::get('/category/{id}', 'CategoryController@index')->name('categories');
 Route::get('/types/{id}', 'TypeController@index')->name('types');
 
 
-// Coins
-Route::get('/coin/{id}', 'CoinController@index')->name('coin');
-Route::get('/coinYear', 'CoinController@coinsByYear')->name('coinYear');
-

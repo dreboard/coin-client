@@ -15,7 +15,7 @@
             </tr>
             <tr class="setFourRow">
                 <td class="setFourRow" valign="middle">
-                    <form action="{{ route('coinYear') }}" method="get" class="compactForm">
+                    <form action="{{ route('coins.year') }}" method="get" class="compactForm">
                         <table width="100%" border="0">
                             <tr class="setThreeRow">
                                 <td> <select name="century" class="form-control">

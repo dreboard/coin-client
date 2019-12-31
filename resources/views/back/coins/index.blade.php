@@ -1,5 +1,25 @@
 @extends('layouts.main')
 
+@push('nav')
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Reports</span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <h6 class="dropdown-header">Pages:</h6>
+            <a class="dropdown-item" href="{{ route('coins.view', ['id' => $coin[0]->id]) }}">Errors</a>
+            <a class="dropdown-item" href="{{ route('coins.view', ['id' => $coin[0]->id]) }}">Color</a>
+            <a class="dropdown-item" href="{{ route('coins.view', ['id' => $coin[0]->id]) }}">Varieties</a>
+            <a class="dropdown-item" href="{{ route('coins.view', ['id' => $coin[0]->id]) }}">Grade</a>
+            <div class="dropdown-divider"></div>
+            <h6 class="dropdown-header">Other Pages:</h6>
+            <a class="dropdown-item" href="404.html">404 Page</a>
+            <a class="dropdown-item active" href="blank.html">Blank Page</a>
+        </div>
+    </li>
+@endpush
+
 @section('content')
     <!-- Page Content -->
     <ol class="breadcrumb">
@@ -11,7 +31,30 @@
         </li>
         <li class="breadcrumb-item active">{{ $coin[0]->coinName }}</li>
     </ol>
-    <table class="table table-bordered">
+    <table class="table" border="0">
+        <thead>
+        <tr>
+
+            <th scope="col">Strike</th>
+            <th scope="col">Metal</th>
+            <th scope="col">Varieties</th>
+            <th scope="col">Investment</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{ $coin[0]->strike }}</td>
+            <td>{{ $coin[0]->coinMetal }}</td>
+            <td>{{ $coin[0]->sub_types }}</td>
+            <td>$400.23</td>
+            <td class="text-right">
+                <a href="{{ route('coins.year', ['coinYear' => $coin[0]->coinYear]) }}" class="btn btn-primary">{{ $coin[0]->coinYear }}</a> | <a href="{{ route('coins.add', ['id' => $coin[0]->id]) }}" class="btn btn-primary">Add</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="table">
         <thead>
         <tr>
 
@@ -19,7 +62,7 @@
             <th scope="col">Unique</th>
             <th scope="col">Face Value</th>
             <th scope="col">Investment</th>
-            <th>Add</th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
@@ -28,8 +71,8 @@
             <td>100</td>
             <td>$20.33</td>
             <td>$400.23</td>
-            <td>
-                <a href="{{ route('coin', ['id' => $coin[0]->id]) }}" class="btn btn-primary">Add</a>
+            <td class="text-right">
+                <a href="{{ route('coins.year', ['coinYear' => $coin[0]->coinYear]) }}" class="btn btn-primary">{{ $coin[0]->coinYear }}</a> | <a href="{{ route('coins.add', ['id' => $coin[0]->id]) }}" class="btn btn-primary">Add</a>
             </td>
         </tr>
         </tbody>
@@ -100,9 +143,9 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                     <tr>
-                        <th>Name</th>
+                        <th>Variety</th>
                         <th>Position</th>
-                        <th>Office</th>
+                        <th>Designation</th>
                         <th>Age</th>
                         <th>Start date</th>
                         <th>Salary</th>
@@ -121,8 +164,8 @@
                     <tbody>
                     @foreach ($varieties as $variety)
                         <tr>
-                            <td><a href="{{ route('coin', ['id' => $variety->id]) }}">{{ $variety->sub_type }}</a></td>
-                            <td><a href="{{ route('coin', ['id' => $variety->id]) }}">{{ $variety->variety }}</a></td>
+                            <td><a href="{{ route('coins.view', ['id' => $variety->id]) }}">{{ $variety->sub_type }}</a></td>
+                            <td><a href="{{ route('coins.view', ['id' => $variety->id]) }}">{{ $variety->variety }}</a></td>
                             <td>{{ $variety->label }}</td>
                             <td>53</td>
                             <td>2009/10/22</td>

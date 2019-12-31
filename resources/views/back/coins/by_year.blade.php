@@ -5,16 +5,16 @@
     <div class="float-left">
         <ol class="breadcrumb year-breadcrumb">
             <li class="breadcrumb-item">
-                <a href="{{ route('coinYear', ['coinYear' => $coins['prevYear']]) }}">{{ $coins['prevYear'] }}</a>
+                <a href="{{ route('coins.year', ['coinYear' => $coins['prevYear']]) }}">{{ $coins['prevYear'] }}</a>
             </li>
             <li class="breadcrumb-item active">{{ $coins['currentYear'] }}</li>
             <li class="breadcrumb-item">
-                <a href="{{ route('coinYear', ['coinYear' => $coins['nextYear']]) }}">{{ $coins['nextYear'] }}</a>
+                <a href="{{ route('coins.year', ['coinYear' => $coins['nextYear']]) }}">{{ $coins['nextYear'] }}</a>
             </li>
         </ol>
     </div>
     <div class="float-right">
-        <form action="{{ route('coinYear') }}" method="get" class="form-inline">
+        <form action="{{ route('coins.year') }}" method="get" class="form-inline">
             <table width="100%" border="0">
                 <tr class="setThreeRow">
                     <td> <select name="century" class="form-control">
@@ -59,7 +59,7 @@
             <td>$20.33</td>
             <td>$400.23</td>
             <td>
-                <a href="{{ route('coinYear', ['coinYear' => $coins['currentYear']]) }}" class="btn btn-primary">Add</a>
+                <a href="{{ route('coins.year', ['coinYear' => $coins['currentYear']]) }}" class="btn btn-primary">Add</a>
             </td>
         </tr>
         </tbody>
@@ -107,32 +107,29 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
+                        <th>Coin</th>
+                        <th>Type</th>
+                        <th>Category</th>
+                        <th>Collected</th>
+                        <th>Investment</th>
                     </tr>
                     </thead>
                     <tfoot>
                     <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
+                        <th>Coin</th>
+                        <th>Type</th>
+                        <th>Category</th>
+                        <th>Collected</th>
+                        <th>Investment</th>
                     </tr>
                     </tfoot>
                     <tbody>
                     @foreach ($coins['list'] as $coin)
                         <tr>
-                            <td><a href="{{ route('coin', ['id' => $coin->id]) }}">{{ $coin->coinName }}</a></td>
-                            <td><a href="{{ route('coin', ['id' => $coin->id]) }}">{{ $coin->coinType }}</a></td>
-                            <td><a href="{{ route('coin', ['id' => $coin->id]) }}">{{ $coin->coinCategory }}</a></td>
+                            <td><a href="{{ route('coins.view', ['id' => $coin->id]) }}">{{ $coin->coinName }}</a></td>
+                            <td><a href="{{ route('types', ['id' => $coin->type_id]) }}">{{ $coin->coinType }}</a></td>
+                            <td><a href="{{ route('categories', ['id' => $coin->cat_id]) }}">{{ $coin->coinCategory }}</a></td>
                             <td>53</td>
-                            <td>2009/10/22</td>
                             <td>$114,500</td>
                         </tr>
                     @endforeach

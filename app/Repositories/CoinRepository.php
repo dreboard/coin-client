@@ -34,12 +34,32 @@ class CoinRepository
     }
 
     /**
+     * Get all coins by type
+     * @param int $id
+     * @return array
+     */
+    public function getCoins(int $id)
+    {
+        return DB::select('call CoinTypeGetAllByCoinID(?)',array($id));
+    }
+
+    /**
      * @param int $id
      * @return array
      */
     public function getCoinVarieties(int $id)
     {
         return DB::select('call CoinGetAllLabelsByCoinId(?)',array($id));
+    }
+
+
+    /**
+     * @param int $id
+     * @return array
+     */
+    public function getCoinDistinctVarieties(int $id)
+    {
+        return DB::select('call CoinGetDistinctVarietyByCoinId(?)',array($id));
     }
 
     /**
@@ -59,7 +79,11 @@ class CoinRepository
      */
     public function getSubTypes(int $id)
     {
-        return DB::select('call CoinListDistinctSubTypeById(?)',array($id));
+        $sub = DB::select('call CoinListDistinctSubTypeById(?)',array($id));
+        if(count($sub) === 0){
+            return [];
+        }
+        return $sub;
     }
 
     /**

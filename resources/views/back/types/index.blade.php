@@ -30,53 +30,38 @@
     @includeIf("back.types.info.{$typeLink}", ['some' => 'data'])
     <hr>
     <!-- DataTables Example -->
-    <div class="card mb-3">
-        <div class="card-header">
-            <i class="fas fa-table"></i>
-            Data Table Example</div>
-        <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                    <thead>
+    <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
 
-                    <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
-                    </tr>
-                    </thead>
-                    <tfoot>
-                    <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
-                    </tr>
-                    </tfoot>
-                    <tbody>
-                    @foreach ($typeCoins as $type)
-                        <tr>
-                            <td><a href="{{ route('coin', ['id' => $type->coin_id]) }}"><img src="http://cdn.dev-php.site/public/img/coins/{!! str_replace(' ', '_', $type->coinVersion) !!}.jpg" style="width: 40px; height: auto;" class="logo"></a></td>
-                            <td><a href="{{ route('coin', ['id' => $type->coin_id]) }}">{{ $type->coinName }}</a></td>
-                            <td>{{ $type->id }}</td>
-                            <td>53</td>
-                            <td>2009/10/22</td>
-                            <td>$114,500</td>
-                        </tr>
-                    @endforeach
+            <tr>
+                <th></th>
+                <th>Type</th>
+                <th>Collected</th>
+                <th>Investment</th>
+            </tr>
+            </thead>
+            <tfoot>
+            <tr>
+                <th></th>
+                <th>Type</th>
+                <th>Collected</th>
+                <th>Investment</th>
+            </tr>
+            </tfoot>
+            <tbody>
+            @foreach ($typeCoins as $type)
+                <tr>
+                    <td class="w-auto"><a href="{{ route('coins.view', ['id' => $type->coin_id]) }}"><img src="http://cdn.dev-php.site/public/img/coins/{!! str_replace(' ', '_', $type->coinVersion) !!}.jpg" style="width: 40px; height: auto;" class="logo"></a></td>
+                    <td class="w-75"><a href="{{ route('coins.view', ['id' => $type->coin_id]) }}">{{ $type->coinName }}</a></td>
+                    <td class="text-center">{{ $type->id }}</td>
+                    <td class="text-right">$114,500</td>
+                </tr>
+            @endforeach
 
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+            </tbody>
+        </table>
     </div>
-    <home-component></home-component>
 @endsection
 @push('scripts')
     <script>

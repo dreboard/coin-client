@@ -2,11 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fba17d0-72e0-41e4-8552-82c28c82e194" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env.testing" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Helpers/CoinHelper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/coins.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/back/coins/add.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/partials/side_nav.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/sections/coins.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/coins-client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/coins-client.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2b131879-bdea-4a70-8f85-0993a4dab92b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2b131879-bdea-4a70-8f85-0993a4dab92b.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2b131879-bdea-4a70-8f85-0993a4dab92b/storage_v2/_src_/schema/coins-test.fXNJ3w.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2b131879-bdea-4a70-8f85-0993a4dab92b/storage_v2/_src_/schema/coins-test.fXNJ3w.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CoinController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CoinController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/CoinRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/CoinRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.phar" beforeDir="false" afterPath="$PROJECT_DIR$/composer.phar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/back/coins/by_year.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/coins/by_year.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/back/coins/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/coins/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/back/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/back/types/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/types/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +57,28 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="coins-test.sqlite" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="coins-test.sqlite" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="coins-test.sqlite" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="coins-test.sqlite" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+        <item name="migrations: table" type="3d80ac25:SqliteImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="coins-test@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
@@ -44,13 +91,6 @@
         <item name="coins-test@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="coins-test: schema" type="ebfa3cd1:MariaImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="coins-test@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="coins-test: schema" type="ebfa3cd1:MariaImplModel$Schema" />
-        <item name="views" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
     </expand>
     <select />
@@ -155,12 +195,24 @@
       <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
       <path value="$PROJECT_DIR$/vendor/phar-io/version" />
       <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/krlove/eloquent-model-generator" />
+      <path value="$PROJECT_DIR$/vendor/krlove/code-generator" />
+      <path value="$PROJECT_DIR$/vendor/xethron/laravel-4-generators" />
+      <path value="$PROJECT_DIR$/vendor/xethron/migrations-generator" />
     </include_path>
   </component>
   <component name="ProjectId" id="1PlbKh7HaCZFCWoBfROQ96a8dlS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DatabaseDriversLRU" value="mysql&#10;sqlite" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/back/coins" />
@@ -168,33 +220,22 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="php.test.frameworks.configurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\_SITES\coins\coins-client\resources\views\back\coins" />
-      <recent name="C:\_SITES\coins\coins-client\app\Repositories" />
-      <recent name="C:\_SITES\coins\coins-client\resources\views\back\categories" />
-      <recent name="C:\_SITES\coins\coins-client\resources\sass" />
-      <recent name="C:\_SITES\coins\coins-client\resources\views\back" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\_SITES\coins\coins-client\database" />
       <recent name="C:\_SITES\coins\coins-client\resources\views\back\types\info" />
       <recent name="C:\_SITES\coins\coins-client\resources\views\back" />
       <recent name="C:\_SITES\coins\coins-client\resources\views\layouts" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\_SITES\coins\coins-client\resources\views\back\coins" />
+      <recent name="C:\_SITES\coins\coins-client\database" />
+      <recent name="C:\_SITES\coins\coins-client\app\Repositories" />
+      <recent name="C:\_SITES\coins\coins-client\resources\views\back\categories" />
+      <recent name="C:\_SITES\coins\coins-client\resources\sass" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.dev">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -229,18 +270,15 @@
     </recent_temporary>
   </component>
   <component name="ServiceViewManager">
-    <option name="allServicesViewState">
-      <serviceView>
-        <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@6f90aa4" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-          </expand>
-          <select />
-        </treeState>
-      </serviceView>
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
     </option>
   </component>
   <component name="SvnConfiguration">
@@ -266,7 +304,14 @@
       <workItem from="1569723256515" duration="648000" />
       <workItem from="1570491212909" duration="120000" />
       <workItem from="1570978658610" duration="29633000" />
-      <workItem from="1571075167720" duration="8470000" />
+      <workItem from="1571075167720" duration="26916000" />
+      <workItem from="1571607086378" duration="65146000" />
+      <workItem from="1571970405023" duration="3321000" />
+      <workItem from="1576901821237" duration="3651000" />
+      <workItem from="1577340355279" duration="2169000" />
+      <workItem from="1577469108453" duration="589000" />
+      <workItem from="1577677744345" duration="469000" />
+      <workItem from="1577678248289" duration="639000" />
     </task>
     <servers />
   </component>
@@ -278,10 +323,18 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="3743" y="111" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1577678215896">
+      <screen x="3280" y="0" width="1600" height="860" />
+    </state>
+    <state x="3743" y="111" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1577678215896" />
   </component>
 </project>
