@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fba17d0-72e0-41e4-8552-82c28c82e194" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/coins-client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/coins-client.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -285,7 +285,7 @@
       <workItem from="1577340355279" duration="2169000" />
       <workItem from="1577469108453" duration="589000" />
       <workItem from="1577677744345" duration="469000" />
-      <workItem from="1577678248289" duration="828000" />
+      <workItem from="1577678248289" duration="1969000" />
     </task>
     <servers />
   </component>
