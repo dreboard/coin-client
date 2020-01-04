@@ -41,11 +41,11 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $mms
  * @property string $odv
  * @property string $rdv
- * @property Coincategory $coincategory
- * @property Cointype $cointype
- * @property Collectcoin[] $collectcoins
+ * @property CoinCategory $coincategory
+ * @property CoinType $cointype
+ * @property CoinCollected $collectcoins
  */
-class Coins extends Model
+class Coin extends Model
 {
     /**
      * @var array
@@ -57,7 +57,7 @@ class Coins extends Model
      */
     public function coincategory()
     {
-        return $this->belongsTo('App\Coincategory', 'coincats_id');
+        return $this->belongsTo('App\CoinCategory', 'coincats_id');
     }
 
     /**
@@ -65,14 +65,14 @@ class Coins extends Model
      */
     public function cointype()
     {
-        return $this->belongsTo('App\Cointype', 'cointypes_id');
+        return $this->belongsTo('App\CoinType', 'cointypes_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function collectcoins()
+    public function collectedcoins()
     {
-        return $this->hasMany('App\Collectcoin', 'coinID');
+        return $this->hasMany('App\CoinCollected', 'coinID');
     }
 }
