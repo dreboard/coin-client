@@ -2,15 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fba17d0-72e0-41e4-8552-82c28c82e194" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php-test-framework.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/CoinVarietyRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/CollectedRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/back/coins/varieties/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/coins-client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/coins-client.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2b131879-bdea-4a70-8f85-0993a4dab92b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2b131879-bdea-4a70-8f85-0993a4dab92b.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2b131879-bdea-4a70-8f85-0993a4dab92b/storage_v2/_src_/schema/coins-test.fXNJ3w.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2b131879-bdea-4a70-8f85-0993a4dab92b/storage_v2/_src_/schema/coins-test.fXNJ3w.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Coins.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Coin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CoinController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CoinController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/CoinRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/CoinRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/back/coins/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/coins/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/sections/coins.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/sections/coins.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,47 +45,25 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="coins-test.sqlite" type="feb32156:DbDataSourceImpl" />
+        <item name="telescope.sqlite" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="coins-test.sqlite" type="feb32156:DbDataSourceImpl" />
+        <item name="telescope.sqlite" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="coins-test.sqlite" type="feb32156:DbDataSourceImpl" />
+        <item name="telescope.sqlite" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="coins-test.sqlite" type="feb32156:DbDataSourceImpl" />
+        <item name="telescope.sqlite" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
         <item name="migrations: table" type="3d80ac25:SqliteImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="coins-test@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="coins-test@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="coins-test@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="coins-test: schema" type="ebfa3cd1:MariaImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="coins-test@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="coins-test: schema" type="ebfa3cd1:MariaImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
     </expand>
     <select />
@@ -188,9 +173,13 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
       <path value="$PROJECT_DIR$/vendor/krlove/eloquent-model-generator" />
       <path value="$PROJECT_DIR$/vendor/krlove/code-generator" />
-      <path value="$PROJECT_DIR$/vendor/xethron/laravel-4-generators" />
-      <path value="$PROJECT_DIR$/vendor/xethron/migrations-generator" />
       <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
+      <path value="$PROJECT_DIR$/vendor/laravel/telescope" />
+      <path value="$PROJECT_DIR$/vendor/moontoast/math" />
+      <path value="$PROJECT_DIR$/vendor/phpseclib/phpseclib" />
+      <path value="$PROJECT_DIR$/vendor/phpseclib/bcmath_compat" />
     </include_path>
   </component>
   <component name="ProjectId" id="1PlbKh7HaCZFCWoBfROQ96a8dlS" />
@@ -263,7 +252,12 @@
       <list>
         <serviceView>
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:telescope.sqlite" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -303,7 +297,8 @@
       <workItem from="1577678248289" duration="1969000" />
       <workItem from="1577935334221" duration="1802000" />
       <workItem from="1578103053369" duration="638000" />
-      <workItem from="1578103794423" duration="10481000" />
+      <workItem from="1578103794423" duration="16590000" />
+      <workItem from="1578191572567" duration="16229000" />
     </task>
     <servers />
   </component>
@@ -328,6 +323,10 @@
       <screen x="3280" y="0" width="1600" height="860" />
     </state>
     <state x="3643" y="38" key="#CLI_Interpreters/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1577938085013" />
+    <state x="3655" y="41" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578200932545">
+      <screen x="3280" y="0" width="1600" height="900" />
+    </state>
+    <state x="3655" y="41" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1360.728/3280.0.1600.900/1360.0.1920.1080@3280.0.1600.900" timestamp="1578200932545" />
     <state x="3743" y="111" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1578103744605">
       <screen x="3280" y="0" width="1600" height="860" />
     </state>
@@ -336,17 +335,28 @@
       <screen x="3280" y="0" width="1600" height="860" />
     </state>
     <state x="3280" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1578114535891" />
-    <state x="3810" y="206" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1578121947165">
-      <screen x="3280" y="0" width="1600" height="860" />
+    <state x="3810" y="216" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1578192509581">
+      <screen x="3280" y="0" width="1600" height="900" />
     </state>
-    <state x="3810" y="206" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1578121947165" />
-    <state x="3843" y="138" key="FileChooserDialogImpl" timestamp="1577938073225">
-      <screen x="3280" y="0" width="1600" height="860" />
+    <state x="3810" y="216" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1360.728/3280.0.1600.900/1360.0.1920.1080@3280.0.1600.900" timestamp="1578192509581" />
+    <state x="3810" y="206" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1578183382707" />
+    <state x="3843" y="144" key="FileChooserDialogImpl" timestamp="1578200923601">
+      <screen x="3280" y="0" width="1600" height="900" />
     </state>
+    <state x="3843" y="144" key="FileChooserDialogImpl/0.0.1360.728/3280.0.1600.900/1360.0.1920.1080@3280.0.1600.900" timestamp="1578200923601" />
     <state x="3843" y="138" key="FileChooserDialogImpl/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1577938073225" />
+    <state x="3856" y="277" key="NewPhpClassDialog" timestamp="1578192135109">
+      <screen x="3280" y="0" width="1600" height="900" />
+    </state>
+    <state x="3856" y="277" key="NewPhpClassDialog/0.0.1360.728/3280.0.1600.900/1360.0.1920.1080@3280.0.1600.900" timestamp="1578192135109" />
+    <state x="3856" y="265" key="NewPhpClassDialog/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1578181266832" />
     <state x="3564" y="26" key="SettingsEditor" timestamp="1577938246025">
       <screen x="3280" y="0" width="1600" height="860" />
     </state>
     <state x="3564" y="26" key="SettingsEditor/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1577938246025" />
+    <state x="3903" y="273" key="com.intellij.database.actions.ToolActions$ScriptingActionBase$MyDatabaseScriptDialog" timestamp="1578202250944">
+      <screen x="3280" y="0" width="1600" height="900" />
+    </state>
+    <state x="3903" y="273" key="com.intellij.database.actions.ToolActions$ScriptingActionBase$MyDatabaseScriptDialog/0.0.1360.728/3280.0.1600.900/1360.0.1920.1080@3280.0.1600.900" timestamp="1578202250944" />
   </component>
 </project>

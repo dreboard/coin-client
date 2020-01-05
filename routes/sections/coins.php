@@ -18,4 +18,6 @@ Route::group(['prefix' => 'coins', 'as' => 'coins.'], function () {
     Route::get('/year', 'CoinController@coinsByYear')->name('year');
     Route::get('/form', 'CoinController@add')->name('form');
     Route::get('/add/{id}', 'CoinController@add')->name('add');
+
+    Route::get('/variety/{id}', 'CoinVarietyController@index')->name('variety');
 });

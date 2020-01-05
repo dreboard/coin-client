@@ -24,5 +24,11 @@
         <property name="enable_load_extension" value="true" />
       </driver-properties>
     </data-source>
+    <data-source source="LOCAL" name="telescope.sqlite" uuid="5770e6b0-d895-4d98-a73d-4033af193832">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/database/telescope.sqlite</jdbc-url>
+    </data-source>
   </component>
 </project>

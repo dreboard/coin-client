@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Repositories\CoinRepository;
+use App\Repositories\CollectedRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Throwable;
@@ -17,14 +18,22 @@ class CoinController extends Controller
      * @var CoinRepository
      */
     private $coinRepository;
+    /**
+     * @var CollectedRepository
+     */
+    private CollectedRepository $collectedRepository;
 
     /**
      * CoinController constructor.
      * @param CoinRepository $coinRepository
+     * @param CollectedRepository $collectedRepository
      */
-    public function __construct(CoinRepository $coinRepository)
+    public function __construct(
+        CoinRepository $coinRepository,
+        CollectedRepository $collectedRepository)
     {
         $this->coinRepository = $coinRepository;
+        $this->collectedRepository = $collectedRepository;
     }
 
 

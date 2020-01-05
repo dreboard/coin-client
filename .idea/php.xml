@@ -98,9 +98,13 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
       <path value="$PROJECT_DIR$/vendor/krlove/eloquent-model-generator" />
       <path value="$PROJECT_DIR$/vendor/krlove/code-generator" />
-      <path value="$PROJECT_DIR$/vendor/xethron/laravel-4-generators" />
-      <path value="$PROJECT_DIR$/vendor/xethron/migrations-generator" />
       <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
+      <path value="$PROJECT_DIR$/vendor/laravel/telescope" />
+      <path value="$PROJECT_DIR$/vendor/moontoast/math" />
+      <path value="$PROJECT_DIR$/vendor/phpseclib/phpseclib" />
+      <path value="$PROJECT_DIR$/vendor/phpseclib/bcmath_compat" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.4" />

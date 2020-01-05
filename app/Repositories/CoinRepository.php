@@ -79,7 +79,7 @@ class CoinRepository
      */
     public function getSubTypes(int $id)
     {
-        $sub = DB::select('call CoinListDistinctSubTypeById(?)',array($id));
+        $sub = DB::select('call CoinListDistinctSubTypeById(?)', [$id]);
         if(count($sub) === 0){
             return [];
         }
