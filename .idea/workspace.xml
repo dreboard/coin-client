@@ -2,23 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fba17d0-72e0-41e4-8552-82c28c82e194" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Repositories/CoinVarietyRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/CollectedRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/back/coins/varieties/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/coins-client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/coins-client.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CoinController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CoinController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/CoinRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/CoinRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/back/coins/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/coins/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/sections/coins.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/sections/coins.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TypeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TypeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/CategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/CategoryRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/CollectedRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/CollectedRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/TypeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/TypeRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/back/coins/varieties/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/coins/varieties/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +32,21 @@
       <set />
     </option>
     <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="coins-test.sqlite" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="coins-test.sqlite" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="coins-test.sqlite" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+      </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="telescope.sqlite" type="feb32156:DbDataSourceImpl" />
@@ -298,7 +302,7 @@
       <workItem from="1577935334221" duration="1802000" />
       <workItem from="1578103053369" duration="638000" />
       <workItem from="1578103794423" duration="16590000" />
-      <workItem from="1578191572567" duration="16229000" />
+      <workItem from="1578191572567" duration="22958000" />
     </task>
     <servers />
   </component>
@@ -335,10 +339,11 @@
       <screen x="3280" y="0" width="1600" height="860" />
     </state>
     <state x="3280" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1578114535891" />
-    <state x="3810" y="216" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1578192509581">
-      <screen x="3280" y="0" width="1600" height="900" />
+    <state x="451" y="175" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1578262453901">
+      <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="3810" y="216" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1360.728/3280.0.1600.900/1360.0.1920.1080@3280.0.1600.900" timestamp="1578192509581" />
+    <state x="451" y="175" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@0.0.1360.728" timestamp="1578262453901" />
     <state x="3810" y="206" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1578183382707" />
     <state x="3843" y="144" key="FileChooserDialogImpl" timestamp="1578200923601">
       <screen x="3280" y="0" width="1600" height="900" />

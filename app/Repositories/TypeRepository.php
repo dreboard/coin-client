@@ -28,6 +28,8 @@ class TypeRepository
         return DB::select('call TypeGetInfo(?)',array($id));
     }
 
+
+
     public function getTypeCoins($id)
     {
         return DB::select('call CoinTypeGetAll(?)',array($id));

@@ -25,4 +25,10 @@ class CollectedRepository
     {
         return DB::select('call CollectionGetCoinsByID(?, ?)', [$id, $user]);
     }
+
+    public function getCollectedByType(int $type_id)
+    {
+
+    }
+
 }

@@ -39,7 +39,7 @@
         <tr><th class="w-25">Label</th><td>{{ $coin[0]->label }}</td></tr>
         <tr><th class="w-25">Sub Type</th> <td>{{ $coin[0]->sub_type }}</td></tr>
         <tr><th class="w-25">Variety Group</th> <td>{{ $coin[0]->grouping }}</td></tr>
-        <tr><th class="w-25">Investment</th></tr>
+        <tr><th class="w-25">Designation</th> <td>{{ $coin[0]->designation }}</td></tr>
         <tr><th></th></tr>
 
 

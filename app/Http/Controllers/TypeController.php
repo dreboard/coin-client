@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Repositories\TypeRepository;
+use Barryvdh\Debugbar\Facade as DebugBar;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Throwable;
@@ -29,12 +30,14 @@ class TypeController extends Controller
         try{
             $typeInfo = $this->typeRepository->getType($id);
             $typeCoins = $this->typeRepository->getTypeCoins($id);
+            $typeCount = count($typeCoins);
             $typeLink = str_replace(' ', '_', $typeInfo[0]->coinType);
-            //dump($typeLink);
+            Debugbar::info($typeInfo);
             return view('back.types.index', [
                 'typeInfo' => $typeInfo,
                 'typeCoins' => $typeCoins,
-                'typeLink' =>  $typeLink
+                'typeLink' =>  $typeLink,
+                'typeCount' =>  $typeCount,
             ]);
         }catch (Throwable $e){
             Log::error($e->getMessage());
