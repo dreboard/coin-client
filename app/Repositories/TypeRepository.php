@@ -34,4 +34,9 @@ class TypeRepository
     {
         return DB::select('call CoinTypeGetAll(?)',array($id));
     }
+
+    public function getTypeCollected($id)
+    {
+        return DB::select('call CoinTypeGetAll(?)',array($id));
+    }
 }

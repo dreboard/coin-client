@@ -11,6 +11,7 @@
 namespace App\Repositories;
 
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class CategoryRepository
@@ -25,12 +26,28 @@ class CategoryRepository
 
     public function getCategory($id)
     {
-        return DB::select('call CategoryGetInfo(?)',array($id));
+        return DB::select('CALL CategoryGetInfo(?)',array($id));
     }
 
     public function getTypes($id)
     {
-        return DB::select('call CoinListCategoryDistinctTypes(?)',array($id));
+        return DB::select('CALL CoinListCategoryDistinctTypes(?)',array($id));
+    }
+
+    public function getTypeAll(int $id)
+    {
+        $typeInfo = [];
+        $types = DB::select( DB::raw("CALL CoinListCategoryDistinctTypes(:id)"), [
+            'id' => $id,
+        ]);
+        $i = 0;
+        foreach ($types as $k => $type){
+            $typeInfo[$k]['coinType'] = $type->coinType;
+            $typeInfo[$k]['id'] = $type->id;
+            $typeInfo[$k]['details'] =  DB::select('CALL CollectedTypeGetInfo(?, ?)',array($type->id, Auth::id()));
+            $i++;
+        }
+        return $typeInfo;
     }
 
 

@@ -33,33 +33,27 @@
                     <thead>
 
                     <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
+                        <th></th>
+                        <th>Type</th>
+                        <th>Collected</th>
+                        <th>Investment</th>
                     </tr>
                     </thead>
                     <tfoot>
                     <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
+                        <th></th>
+                        <th>Type</th>
+                        <th>Collected</th>
+                        <th>Investment</th>
                     </tr>
                     </tfoot>
                     <tbody>
-                    @foreach ($types as $type)
+                    @foreach ($types as $k => $type)
                         <tr>
-                            <td><a href="{{ route('types', ['id' => $type->id]) }}"><img src="http://cdn.dev-php.site/public/img/coins/{!! str_replace(' ', '_', $type->coinType) !!}.jpg" style="width: 40px; height: auto;" class="logo"></a></td>
-                            <td><a href="{{ route('types', ['id' => $type->id]) }}">{{ $type->coinType }}</a></td>
-                            <td>{{ $type->id }}</td>
-                            <td>53</td>
-                            <td>2009/10/22</td>
-                            <td>$114,500</td>
+                            <td><a href="{{ route('types', ['id' => $type['id']]) }}"><img src="http://cdn.dev-php.site/public/img/coins/{!! str_replace(' ', '_', $type['coinType']) !!}.jpg" style="width: 40px; height: auto;" class="logo"></a></td>
+                            <td class="w-75"><a href="{{ route('types', ['id' => $type['id']]) }}">{{ $type['coinType'] }}</a></td>
+                            <td>{{ $type['details'][0]->typeCount }}</td>
+                            <td>${{ $type['details'][0]->typeInvest }}</td>
                         </tr>
                     @endforeach
 
