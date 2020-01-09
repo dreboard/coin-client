@@ -5,8 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/CategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/CategoryRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/TypeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/TypeRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/back/categories/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/categories/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,12 +259,7 @@
       <list>
         <serviceView>
           <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:telescope.sqlite" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </treeState>
         </serviceView>
@@ -306,7 +300,8 @@
       <workItem from="1577935334221" duration="1802000" />
       <workItem from="1578103053369" duration="638000" />
       <workItem from="1578103794423" duration="16590000" />
-      <workItem from="1578191572567" duration="33376000" />
+      <workItem from="1578191572567" duration="36807000" />
+      <workItem from="1578533663651" duration="3050000" />
     </task>
     <servers />
   </component>

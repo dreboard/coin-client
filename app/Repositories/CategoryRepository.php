@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\DB;
 
 class CategoryRepository
 {
+    private const CACHE_MINS = 20;
 
     public function getHomePage()
     {
@@ -51,5 +52,30 @@ class CategoryRepository
     }
 
 
+    /**
+     * @param int $id
+     * @return mixed
+     * @throws \Exception
+     */
+    public function getTypeAllCache(int $id)
+    {
+        $typeInfo = [];
+        $types = cache()->remember("types{Auth::id().$id}", now()->addMinutes(self::CACHE_MINS), function () use ($id){
+            return DB::select( DB::raw("CALL CoinListCategoryDistinctTypes(:id)"), [
+                'id' => $id,
+            ]);
+        });
+
+        $typeInfoArr = cache()->remember("typeInfoArr{Auth::id().$id}", now()->addMinutes(self::CACHE_MINS), function () use ($types){
+            foreach ($types as $k => $type){
+                $typeInfo[$k]['coinType'] = $type->coinType;
+                $typeInfo[$k]['id'] = $type->id;
+                $typeInfo[$k]['details'] =  DB::select('CALL CollectedTypeGetInfo(?, ?)', [$type->id, Auth::id()]);
+            }
+            return $typeInfo;
+        });
+
+        return $typeInfoArr;
+    }
 
 }

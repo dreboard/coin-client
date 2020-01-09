@@ -30,7 +30,7 @@ class CategoryController extends Controller
     {
         try{
             $category = $this->categoryRepository->getCategory($id);
-            $types = $this->categoryRepository->getTypeAll($id);
+            $types = $this->categoryRepository->getTypeAllCache($id);
             //dd($types);
             return view('back.categories.index', [
                 'types' => $types,
