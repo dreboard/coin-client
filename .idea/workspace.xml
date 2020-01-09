@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fba17d0-72e0-41e4-8552-82c28c82e194" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Repositories/CoinYearRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/CategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/CategoryRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CoinController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CoinController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/CoinRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/CoinRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/back/coins/by_year.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/coins/by_year.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -301,7 +302,7 @@
       <workItem from="1578103053369" duration="638000" />
       <workItem from="1578103794423" duration="16590000" />
       <workItem from="1578191572567" duration="36807000" />
-      <workItem from="1578533663651" duration="3050000" />
+      <workItem from="1578533663651" duration="9405000" />
     </task>
     <servers />
   </component>
@@ -338,12 +339,12 @@
       <screen x="3280" y="0" width="1600" height="860" />
     </state>
     <state x="3280" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1578114535891" />
-    <state x="451" y="175" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1578262453901">
-      <screen x="0" y="0" width="1360" height="728" />
+    <state x="3810" y="206" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1578546178228">
+      <screen x="3280" y="0" width="1600" height="860" />
     </state>
     <state x="3810" y="216" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1360.728/3280.0.1600.900/1360.0.1920.1080@3280.0.1600.900" timestamp="1578192509581" />
     <state x="451" y="175" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@0.0.1360.728" timestamp="1578262453901" />
-    <state x="3810" y="206" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1578183382707" />
+    <state x="3810" y="206" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1578546178228" />
     <state width="387" height="458" key="DebuggerActiveHint" timestamp="1578526805521">
       <screen x="3280" y="0" width="1600" height="860" />
     </state>
@@ -401,11 +402,11 @@
       <screen x="3280" y="0" width="1600" height="860" />
     </state>
     <state width="1545" height="257" key="GridCell.Tab.2.right/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1578526948440" />
-    <state x="3856" y="277" key="NewPhpClassDialog" timestamp="1578192135109">
-      <screen x="3280" y="0" width="1600" height="900" />
+    <state x="3856" y="265" key="NewPhpClassDialog" timestamp="1578545973690">
+      <screen x="3280" y="0" width="1600" height="860" />
     </state>
     <state x="3856" y="277" key="NewPhpClassDialog/0.0.1360.728/3280.0.1600.900/1360.0.1920.1080@3280.0.1600.900" timestamp="1578192135109" />
-    <state x="3856" y="265" key="NewPhpClassDialog/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1578181266832" />
+    <state x="3856" y="265" key="NewPhpClassDialog/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1578545973690" />
     <state x="3564" y="26" key="SettingsEditor" timestamp="1577938246025">
       <screen x="3280" y="0" width="1600" height="860" />
     </state>

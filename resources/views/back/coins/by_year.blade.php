@@ -110,6 +110,7 @@
                         <th>Coin</th>
                         <th>Type</th>
                         <th>Category</th>
+                        <th>Denomination</th>
                         <th>Collected</th>
                         <th>Investment</th>
                     </tr>
@@ -119,6 +120,7 @@
                         <th>Coin</th>
                         <th>Type</th>
                         <th>Category</th>
+                        <th>Denomination</th>
                         <th>Collected</th>
                         <th>Investment</th>
                     </tr>
@@ -129,6 +131,7 @@
                             <td><a href="{{ route('coins.view', ['id' => $coin->id]) }}">{{ $coin->coinName }}</a></td>
                             <td><a href="{{ route('types', ['id' => $coin->type_id]) }}">{{ $coin->coinType }}</a></td>
                             <td><a href="{{ route('categories', ['id' => $coin->cat_id]) }}">{{ $coin->coinCategory }}</a></td>
+                            <td><a href="{{ route('categories', ['id' => $coin->cat_id]) }}">{{ $coin->denomination }}</a></td>
                             <td>53</td>
                             <td>$114,500</td>
                         </tr>
@@ -146,7 +149,9 @@
     <script>
         console.log('ready');
         $(document).ready(function() {
-            $('#dataTable').DataTable();
+            $('#dataTable').DataTable( {
+                "order": [[ 3, "asc" ]]
+            } );
         });
     </script>
 @endpush

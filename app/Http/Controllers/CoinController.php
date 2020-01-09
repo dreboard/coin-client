@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Repositories\CoinRepository;
+use Facades\App\Repositories\CoinRepository;
+use Facades\App\Repositories\CoinYearRepository;
 use App\Repositories\CollectedRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
@@ -14,28 +15,14 @@ use Throwable;
  */
 class CoinController extends Controller
 {
-    /**
-     * @var CoinRepository
-     */
-    private $coinRepository;
-    /**
-     * @var CollectedRepository
-     */
-    private CollectedRepository $collectedRepository;
 
     /**
      * CoinController constructor.
-     * @param CoinRepository $coinRepository
-     * @param CollectedRepository $collectedRepository
      */
-    public function __construct(
-        CoinRepository $coinRepository,
-        CollectedRepository $collectedRepository)
+    public function __construct()
     {
-        $this->coinRepository = $coinRepository;
-        $this->collectedRepository = $collectedRepository;
-    }
 
+    }
 
     /**
      * @param int $id
@@ -44,11 +31,11 @@ class CoinController extends Controller
     public function index(int $id)
     {
         try{
-            $coin = $this->coinRepository->getCoin($id);
-            $varieties = $this->coinRepository->getCoinVarieties($id);
-            $subTypes = $this->coinRepository->getSubTypes($id);
+            $coin = CoinRepository::getCoin($id);
+            $varieties = CoinRepository::getCoinVarieties($id);
+            $subTypes = CoinRepository::getSubTypes($id);
             $typeLink = str_replace(' ', '_', $coin[0]->coinType);
-            $varietyList = $this->coinRepository->listCoinVarieties($id);
+            $varietyList = CoinRepository::listCoinVarieties($id);
             return view('back.coins.index', [
                 'coin' => $coin,
                 'varieties' => $varieties,
@@ -76,7 +63,7 @@ class CoinController extends Controller
                 $coinYear = $request->input('coinYear');
             }
 
-            $coins = $this->coinRepository->getCoinsByYear($coinYear);
+            $coins = CoinYearRepository::getCoinsByYear($coinYear);
             return view('back.coins.by_year', [
                 'coins' => $coins
             ]);
@@ -90,14 +77,14 @@ class CoinController extends Controller
     public function add($id)
     {
         try{
-            $coin = $this->coinRepository->getCoin($id);
-            $coins = $this->coinRepository->getCoins($id);
-            $varieties = $this->coinRepository->getCoinVarieties($id);
-            $subTypes = $this->coinRepository->getSubTypes($id);
+            $coin = CoinRepository::getCoin($id);
+            $coins = CoinRepository::getCoins($id);
+            $varieties = CoinRepository::getCoinVarieties($id);
+            $subTypes = CoinRepository::getSubTypes($id);
             //dd($subTypes);
             $typeLink = str_replace(' ', '_', $coin[0]->coinType);
-            $varietyList = $this->coinRepository->listCoinVarieties($id);
-            $distinctVarieties = $this->coinRepository->getCoinDistinctVarieties($id);
+            $varietyList = CoinRepository::listCoinVarieties($id);
+            $distinctVarieties = CoinRepository::getCoinDistinctVarieties($id);
             return view('back.coins.add', [
                 'coin' => $coin,
                 'coins' => $coins,

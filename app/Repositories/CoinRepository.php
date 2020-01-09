@@ -86,22 +86,5 @@ class CoinRepository
         return $sub;
     }
 
-    /**
-     * Get list of coins by year
-     * @param int $year
-     * @return array
-     * @throws \Exception
-     */
-    public function getCoinsByYear(int $year)
-    {
-        if (in_array($year, range(1793, date('Y')), true)) {
-            $coinYears = [];
-            $coinYears['list'] = DB::select('call CoinGetAllFromYear(?)',array($year));
-            $coinYears['currentYear'] = $year;
-            $coinYears['nextYear'] = $year +1;
-            $coinYears['prevYear'] = $year -1;
-            return $coinYears;
-        }
-        throw new Exception('Year range is not valid for '.__METHOD__);
-    }
+
 }
