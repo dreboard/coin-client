@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Repositories\CategoryRepository;
+use Facades\App\Repositories\CategoryRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Throwable;
@@ -11,27 +11,25 @@ class CategoryController extends Controller
 {
 
     /**
-     * @var CategoryRepository
-     */
-    private $categoryRepository;
-
-    /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct(CategoryRepository $categoryRepository)
+    public function __construct()
     {
-        $this->middleware('auth');
-        $this->categoryRepository = $categoryRepository;
+
     }
 
-    public function index($id)
+    /**
+     * Create Category home page data
+     * @param int $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector|\Illuminate\View\View
+     */
+    public function index(int $id)
     {
         try{
-            $category = $this->categoryRepository->getCategory($id);
-            $types = $this->categoryRepository->getTypeAllCache($id);
-            //dd($types);
+            $category = CategoryRepository::getCategory($id);
+            $types = CategoryRepository::getTypeAllCache($id);
             return view('back.categories.index', [
                 'types' => $types,
                 'category' => $category

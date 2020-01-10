@@ -98,50 +98,42 @@
 
     <hr>
     <!-- DataTables Example -->
-    <div class="card mb-3">
-        <div class="card-header">
-            <i class="fas fa-table"></i>
-            Data Table Example</div>
-        <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                    <thead>
-                    <tr>
-                        <th>Coin</th>
-                        <th>Type</th>
-                        <th>Category</th>
-                        <th>Denomination</th>
-                        <th>Collected</th>
-                        <th>Investment</th>
-                    </tr>
-                    </thead>
-                    <tfoot>
-                    <tr>
-                        <th>Coin</th>
-                        <th>Type</th>
-                        <th>Category</th>
-                        <th>Denomination</th>
-                        <th>Collected</th>
-                        <th>Investment</th>
-                    </tr>
-                    </tfoot>
-                    <tbody>
-                    @foreach ($coins['list'] as $coin)
-                        <tr>
-                            <td><a href="{{ route('coins.view', ['id' => $coin->id]) }}">{{ $coin->coinName }}</a></td>
-                            <td><a href="{{ route('types', ['id' => $coin->type_id]) }}">{{ $coin->coinType }}</a></td>
-                            <td><a href="{{ route('categories', ['id' => $coin->cat_id]) }}">{{ $coin->coinCategory }}</a></td>
-                            <td><a href="{{ route('categories', ['id' => $coin->cat_id]) }}">{{ $coin->denomination }}</a></td>
-                            <td>53</td>
-                            <td>$114,500</td>
-                        </tr>
-                    @endforeach
+    <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+            <tr>
+                <th>Coin</th>
+                <th>Type</th>
+                <th>Category</th>
+                <th>Denomination</th>
+                <th>Collected</th>
+                <th>Investment</th>
+            </tr>
+            </thead>
+            <tfoot>
+            <tr>
+                <th>Coin</th>
+                <th>Type</th>
+                <th>Category</th>
+                <th>Denomination</th>
+                <th>Collected</th>
+                <th>Investment</th>
+            </tr>
+            </tfoot>
+            <tbody>
+            @foreach ($coins['list'] as $coin)
+                <tr>
+                    <td><a href="{{ route('coins.view', ['id' => $coin->id]) }}">{{ $coin->coinName }}</a></td>
+                    <td><a href="{{ route('types', ['id' => $coin->type_id]) }}">{{ $coin->coinType }}</a></td>
+                    <td><a href="{{ route('categories', ['id' => $coin->cat_id]) }}">{{ $coin->coinCategory }}</a></td>
+                    <td><a href="{{ route('categories', ['id' => $coin->cat_id]) }}">{{ $coin->denomination }}</a></td>
+                    <td>53</td>
+                    <td>$114,500</td>
+                </tr>
+            @endforeach
 
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+            </tbody>
+        </table>
     </div>
 
 @endsection

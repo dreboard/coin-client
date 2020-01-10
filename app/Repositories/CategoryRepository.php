@@ -20,6 +20,7 @@ class CategoryRepository
 
     public function getHomePage()
     {
+        $catInfo = [];
         return DB::select(
             'SELECT * FROM ViewAllCategoriesList'
         );
@@ -27,7 +28,7 @@ class CategoryRepository
 
     public function getCategory($id)
     {
-        return DB::select('CALL CategoryGetInfo(?)',array($id));
+        return DB::select('CALL CategoryGetAllInfoByUser(?,?)', [$id, Auth::id()]);
     }
 
     public function getTypes($id)
@@ -45,7 +46,7 @@ class CategoryRepository
         foreach ($types as $k => $type){
             $typeInfo[$k]['coinType'] = $type->coinType;
             $typeInfo[$k]['id'] = $type->id;
-            $typeInfo[$k]['details'] =  DB::select('CALL CollectedTypeGetInfo(?, ?)',array($type->id, Auth::id()));
+            $typeInfo[$k]['details'] =  DB::select('CALL CollectedTypeGetInfo(?, ?)', [$type->id, Auth::id()]);
             $i++;
         }
         return $typeInfo;
