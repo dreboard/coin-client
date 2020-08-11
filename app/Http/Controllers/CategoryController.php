@@ -28,7 +28,7 @@ class CategoryController extends Controller
     public function index(int $id)
     {
         try{
-            $category = CategoryRepository::getCategory($id);
+            $category = CategoryRepository::getById($id);
             $types = CategoryRepository::getTypeAllCache($id);
             return view('back.categories.index', [
                 'types' => $types,
@@ -36,7 +36,7 @@ class CategoryController extends Controller
             ]);
         }catch (Throwable $e){
             Log::error($e->getMessage());
-            return redirect('home')->with('status', 'Your request is not valid');
+            return redirect('home')->with('status', 'Category could not be loaded');
         }
 
     }

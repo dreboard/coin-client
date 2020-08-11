@@ -45,7 +45,7 @@ class CoinController extends Controller
             ]);
         }catch (Throwable $e){
             Log::error($e->getMessage());
-            return redirect('home')->with('status', 'Your request is not valid');
+            return redirect('home')->with('status', 'Coin could not be found');
         }
 
     }
@@ -69,7 +69,7 @@ class CoinController extends Controller
             ]);
         }catch (Throwable $e){
             Log::error($e->getMessage());
-            return redirect('home')->with('status', 'Your request is not valid');
+            return redirect('home')->with('status', 'Year could not be loaded');
         }
 
     }
@@ -96,7 +96,7 @@ class CoinController extends Controller
             ]);
         }catch (Throwable $e){
             Log::error($e->getMessage());
-            return redirect('home')->with('status', 'Your request is not valid');
+            return redirect('home')->with('status', 'Coin could not be added');
         }
     }
 

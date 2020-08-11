@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="2fba17d0-72e0-41e4-8552-82c28c82e194" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/commandlinetools/Laravel_8_11_20__12_55_AM.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/commandlinetools/schemas/frameworkDescriptionVersion1.1.4.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Interfaces/CoinRepositoryInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CoinController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CoinController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/CategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/CategoryRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/back/categories/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/categories/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/back/coins/by_year.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/coins/by_year.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/back/coins/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/coins/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/back/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/sb-admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/sb-admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/back/coins/varieties/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/coins/varieties/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,58 +45,6 @@
       <phar pharPath="$PROJECT_DIR$/composer.phar" />
     </execution>
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="coins-test.sqlite" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="coins-test.sqlite" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="coins-test.sqlite" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="telescope.sqlite" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="telescope.sqlite" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="telescope.sqlite" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="telescope.sqlite" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-        <item name="migrations: table" type="3d80ac25:SqliteImplModel$Table" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -83,12 +55,8 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IgnoredFileRootStore">
-    <option name="generatedRoots">
-      <set>
-        <option value="C:\_SITES\coins\coins-client\.idea" />
-      </set>
-    </option>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
   </component>
   <component name="PhpServers">
     <servers>
@@ -196,14 +164,13 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql&#10;sqlite" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/xampp/php/php.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../xampp/php/php.exe" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -240,6 +207,16 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="prod" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="prod" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="watch" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -252,23 +229,13 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.watch" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.prod" />
+        <item itemvalue="npm.watch" />
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -304,122 +271,56 @@
       <workItem from="1578103053369" duration="638000" />
       <workItem from="1578103794423" duration="16590000" />
       <workItem from="1578191572567" duration="36807000" />
-      <workItem from="1578533663651" duration="14268000" />
+      <workItem from="1578533663651" duration="17520000" />
+      <workItem from="1578683537406" duration="1857000" />
+      <workItem from="1583473198749" duration="79000" />
+      <workItem from="1583473535798" duration="1212000" />
+      <workItem from="1595386735151" duration="96000" />
+      <workItem from="1595386983439" duration="115000" />
+      <workItem from="1595387480773" duration="2410000" />
+      <workItem from="1596950779909" duration="619000" />
+      <workItem from="1596951605452" duration="9638000" />
+      <workItem from="1597038512239" duration="882000" />
+      <workItem from="1597121592666" duration="788000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="3643" y="38" key="#CLI_Interpreters" timestamp="1577938085013">
-      <screen x="3280" y="0" width="1600" height="860" />
+    <state x="2117" y="212" key="#com.intellij.ide.util.MemberChooser" timestamp="1596956938270">
+      <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state x="3643" y="38" key="#CLI_Interpreters/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1577938085013" />
-    <state x="3655" y="41" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578200932545">
-      <screen x="3280" y="0" width="1600" height="900" />
+    <state x="2117" y="212" key="#com.intellij.ide.util.MemberChooser/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@1360.0.1920.1080" timestamp="1596956938270" />
+    <state x="1637" y="259" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1597120962606">
+      <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state x="3655" y="41" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1360.728/3280.0.1600.900/1360.0.1920.1080@3280.0.1600.900" timestamp="1578200932545" />
-    <state x="3743" y="111" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1578103744605">
-      <screen x="3280" y="0" width="1600" height="860" />
+    <state x="1637" y="259" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@0.0.1360.728" timestamp="1597120962606" />
+    <state x="1912" y="303" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@1360.0.1920.1080" timestamp="1596951442503" />
+    <state x="2086" y="370" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1595388641826">
+      <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state x="3743" y="111" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1578103744605" />
-    <state x="3280" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1578114535891">
-      <screen x="3280" y="0" width="1600" height="860" />
+    <state x="2086" y="370" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@1360.0.1920.1080" timestamp="1595388641826" />
+    <state x="2175" y="322" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1" timestamp="1595388524746">
+      <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state x="3280" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1578114535891" />
-    <state x="3810" y="206" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1578546178228">
-      <screen x="3280" y="0" width="1600" height="860" />
+    <state x="2175" y="322" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@1360.0.1920.1080" timestamp="1595388524746" />
+    <state x="2089" y="294" key="NewPhpClassDialog" timestamp="1597036624783">
+      <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state x="3810" y="216" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1360.728/3280.0.1600.900/1360.0.1920.1080@3280.0.1600.900" timestamp="1578192509581" />
-    <state x="451" y="175" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@0.0.1360.728" timestamp="1578262453901" />
-    <state x="3810" y="206" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1578546178228" />
-    <state width="387" height="458" key="DebuggerActiveHint" timestamp="1578526805521">
-      <screen x="3280" y="0" width="1600" height="860" />
-    </state>
-    <state width="387" height="458" key="DebuggerActiveHint/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1578526805521" />
-    <state x="3843" y="144" key="FileChooserDialogImpl" timestamp="1578200923601">
-      <screen x="3280" y="0" width="1600" height="900" />
-    </state>
-    <state x="3843" y="144" key="FileChooserDialogImpl/0.0.1360.728/3280.0.1600.900/1360.0.1920.1080@3280.0.1600.900" timestamp="1578200923601" />
-    <state x="3843" y="138" key="FileChooserDialogImpl/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1577938073225" />
-    <state width="1545" height="257" key="GridCell.Tab.0.bottom" timestamp="1578526948440">
-      <screen x="3280" y="0" width="1600" height="860" />
-    </state>
-    <state width="1545" height="257" key="GridCell.Tab.0.bottom/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1578526948440" />
-    <state width="1545" height="257" key="GridCell.Tab.0.center" timestamp="1578526948440">
-      <screen x="3280" y="0" width="1600" height="860" />
-    </state>
-    <state width="1545" height="257" key="GridCell.Tab.0.center/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1578526948440" />
-    <state width="1545" height="257" key="GridCell.Tab.0.left" timestamp="1578526948440">
-      <screen x="3280" y="0" width="1600" height="860" />
-    </state>
-    <state width="1545" height="257" key="GridCell.Tab.0.left/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1578526948440" />
-    <state width="1545" height="257" key="GridCell.Tab.0.right" timestamp="1578526948440">
-      <screen x="3280" y="0" width="1600" height="860" />
-    </state>
-    <state width="1545" height="257" key="GridCell.Tab.0.right/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1578526948440" />
-    <state width="1545" height="257" key="GridCell.Tab.1.bottom" timestamp="1578526948440">
-      <screen x="3280" y="0" width="1600" height="860" />
-    </state>
-    <state width="1545" height="257" key="GridCell.Tab.1.bottom/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1578526948440" />
-    <state width="1545" height="257" key="GridCell.Tab.1.center" timestamp="1578526948440">
-      <screen x="3280" y="0" width="1600" height="860" />
-    </state>
-    <state width="1545" height="257" key="GridCell.Tab.1.center/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1578526948440" />
-    <state width="1545" height="257" key="GridCell.Tab.1.left" timestamp="1578526948440">
-      <screen x="3280" y="0" width="1600" height="860" />
-    </state>
-    <state width="1545" height="257" key="GridCell.Tab.1.left/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1578526948440" />
-    <state width="1545" height="257" key="GridCell.Tab.1.right" timestamp="1578526948440">
-      <screen x="3280" y="0" width="1600" height="860" />
-    </state>
-    <state width="1545" height="257" key="GridCell.Tab.1.right/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1578526948440" />
-    <state width="1545" height="257" key="GridCell.Tab.2.bottom" timestamp="1578526948440">
-      <screen x="3280" y="0" width="1600" height="860" />
-    </state>
-    <state width="1545" height="257" key="GridCell.Tab.2.bottom/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1578526948440" />
-    <state width="1545" height="257" key="GridCell.Tab.2.center" timestamp="1578526948440">
-      <screen x="3280" y="0" width="1600" height="860" />
-    </state>
-    <state width="1545" height="257" key="GridCell.Tab.2.center/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1578526948440" />
-    <state width="1545" height="257" key="GridCell.Tab.2.left" timestamp="1578526948440">
-      <screen x="3280" y="0" width="1600" height="860" />
-    </state>
-    <state width="1545" height="257" key="GridCell.Tab.2.left/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1578526948440" />
-    <state width="1545" height="257" key="GridCell.Tab.2.right" timestamp="1578526948440">
-      <screen x="3280" y="0" width="1600" height="860" />
-    </state>
-    <state width="1545" height="257" key="GridCell.Tab.2.right/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1578526948440" />
-    <state x="3856" y="265" key="NewPhpClassDialog" timestamp="1578545973690">
-      <screen x="3280" y="0" width="1600" height="860" />
-    </state>
-    <state x="3856" y="277" key="NewPhpClassDialog/0.0.1360.728/3280.0.1600.900/1360.0.1920.1080@3280.0.1600.900" timestamp="1578192135109" />
-    <state x="3856" y="265" key="NewPhpClassDialog/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1578545973690" />
-    <state x="3564" y="26" key="SettingsEditor" timestamp="1577938246025">
-      <screen x="3280" y="0" width="1600" height="860" />
-    </state>
-    <state x="3564" y="26" key="SettingsEditor/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@3280.0.1600.860" timestamp="1577938246025" />
-    <state x="3903" y="273" key="com.intellij.database.actions.ToolActions$ScriptingActionBase$MyDatabaseScriptDialog" timestamp="1578202250944">
-      <screen x="3280" y="0" width="1600" height="900" />
-    </state>
-    <state x="3903" y="273" key="com.intellij.database.actions.ToolActions$ScriptingActionBase$MyDatabaseScriptDialog/0.0.1360.728/3280.0.1600.900/1360.0.1920.1080@3280.0.1600.900" timestamp="1578202250944" />
-    <state x="3688" y="208" width="607" height="536" key="find.popup" timestamp="1578600998198">
-      <screen x="3280" y="0" width="1600" height="860" />
-    </state>
-    <state x="3688" y="208" width="607" height="536" key="find.popup/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@0.0.1360.728" timestamp="1578600998198" />
+    <state x="2089" y="294" key="NewPhpClassDialog/3280.0.1600.860/1360.0.1920.1080/0.0.1360.728@1360.0.1920.1080" timestamp="1597036624783" />
   </component>
 </project>

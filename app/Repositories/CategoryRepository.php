@@ -11,33 +11,80 @@
 namespace App\Repositories;
 
 
+use App\Exceptions\CategoryException;
+use Exception;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
+use \Illuminate\Database\QueryException;
+use RuntimeException;
+use Throwable;
 
-class CategoryRepository
+/**
+ * Class CategoryRepository
+ * @package App\Repositories
+ */
+class CategoryRepository implements CoinRepositoryInterface
 {
+    /**
+     *
+     */
     private const CACHE_MINS = 20;
 
+    /**
+     * @return array
+     */
     public function getHomePage()
     {
-        $catInfo = [];
         return DB::select(
             'SELECT * FROM ViewAllCategoriesList'
         );
     }
 
-    public function getCategory($id)
+    /**
+     * Get Category info by ID
+     * @param int $id
+     * @return mixed
+     */
+    public function getById(int $id)
     {
-        return DB::select('CALL CategoryGetAllInfoByUser(?,?)', [$id, Auth::id()]);
+        if (!$id || $id === 0) {
+            throw new CategoryException('No Category ID given -- '. __CLASS__.'/'.__METHOD__);
+        }
+        try {
+            return DB::select('CALL CategoryGetAllInfoByUser(?,?)', [$id, Auth::id()]);
+        } catch (QueryException $e) {
+            Log::error('DB Error -- '. __CLASS__.'/'.__METHOD__. '/'.$e->getMessage());
+            return redirect('home')->with('status', 'Category does not exist');
+        }
     }
 
+    /**
+     * @param $id
+     * @return mixed
+     */
     public function getTypes($id)
     {
-        return DB::select('CALL CoinListCategoryDistinctTypes(?)',array($id));
+        if (!$id || $id === 0) {
+            throw new CategoryException('No Category ID given -- '. __CLASS__.'/'.__METHOD__);
+        }
+        try {
+            return DB::select('CALL CoinListCategoryDistinctTypes(?)',array($id));
+        } catch (QueryException $e) {
+            Log::error('DB Error -- '. __CLASS__.'/'.__METHOD__. '/'.$e->getMessage());
+            return redirect('home')->with('status', 'Category types do not exist');
+        }
     }
 
+    /**
+     * @param int $id
+     * @return array
+     */
     public function getTypeAll(int $id)
     {
+        if (!$id || $id === 0) {
+            throw new CategoryException('No Category ID given -- '. __CLASS__.'/'.__METHOD__);
+        }
         $typeInfo = [];
         $types = DB::select( DB::raw("CALL CoinListCategoryDistinctTypes(:id)"), [
             'id' => $id,
@@ -56,16 +103,15 @@ class CategoryRepository
     /**
      * @param int $id
      * @return mixed
-     * @throws \Exception
+     * @throws Exception
      */
     public function getTypeAllCache(int $id)
     {
+        if (!$id || $id === 0) {
+            throw new CategoryException('No Category ID given -- '. __CLASS__.'/'.__METHOD__);
+        }
         $typeInfo = [];
-        $types = cache()->remember("types{Auth::id().$id}", now()->addMinutes(self::CACHE_MINS), function () use ($id){
-            return DB::select( DB::raw("CALL CoinListCategoryDistinctTypes(:id)"), [
-                'id' => $id,
-            ]);
-        });
+        $types = $this->setTypeCache($id);
 
         $typeInfoArr = cache()->remember("typeInfoArr{Auth::id().$id}", now()->addMinutes(self::CACHE_MINS), function () use ($types){
             foreach ($types as $k => $type){
@@ -77,6 +123,27 @@ class CategoryRepository
         });
 
         return $typeInfoArr;
+    }
+
+    /**
+     * Cache types for a category
+     * @param int $id
+     * @return mixed
+     * @throws Exception
+     */
+    public function setTypeCache(int $id)
+    {
+        try{
+            return cache()->remember("types{Auth::id().$id}", now()->addMinutes(self::CACHE_MINS), function () use ($id) {
+                return DB::select(DB::raw("CALL CoinListCategoryDistinctTypes(:id)"), [
+                    'id' => $id,
+                ]);
+            });
+        }catch (Throwable $e){
+            Log::error($e->getMessage());
+            return redirect('home')->with('status', 'A memory issue has occured');
+        }
+
     }
 
 }
