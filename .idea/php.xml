@@ -2,12 +2,12 @@
 <project version="4">
   <component name="MessDetector">
     <phpmd_settings>
-      <MessDetectorConfiguration max_messages_per_file="100" tool_path="C:/xampp719/htdocs/_COINS/coin_mvc/vendor/bin/phpmd" />
+      <MessDetectorConfiguration max_messages_per_file="100" tool_path="$PROJECT_DIR$/../../../xampp719/htdocs/_COINS/coin_mvc/vendor/bin/phpmd" />
     </phpmd_settings>
   </component>
   <component name="PhpCodeSniffer">
     <phpcs_settings>
-      <PhpCSConfiguration max_messages_per_file="100" standards="MySource;PEAR;PSR1;PSR2;Squiz;Zend" tool_path="C:/xampp719/htdocs/_COINS/coin_mvc/vendor/bin/phpcs" timeout="15000" />
+      <PhpCSConfiguration max_messages_per_file="100" standards="MySource;PEAR;PSR1;PSR2;Squiz;Zend" tool_path="$PROJECT_DIR$/../../../xampp719/htdocs/_COINS/coin_mvc/vendor/bin/phpcs" timeout="15000" />
     </phpcs_settings>
   </component>
   <component name="PhpIncludePathManager">
@@ -41,7 +41,6 @@
       <path value="$PROJECT_DIR$/vendor/psr/container" />
       <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
       <path value="$PROJECT_DIR$/vendor/psr/log" />
-      <path value="$PROJECT_DIR$/vendor/erusev/parsedown" />
       <path value="$PROJECT_DIR$/vendor/league/flysystem" />
       <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
       <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
@@ -105,6 +104,11 @@
       <path value="$PROJECT_DIR$/vendor/moontoast/math" />
       <path value="$PROJECT_DIR$/vendor/phpseclib/phpseclib" />
       <path value="$PROJECT_DIR$/vendor/phpseclib/bcmath_compat" />
+      <path value="$PROJECT_DIR$/vendor/league/mime-type-detection" />
+      <path value="$PROJECT_DIR$/vendor/league/commonmark" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.4" />
