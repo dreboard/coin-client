@@ -13,6 +13,6 @@ namespace App\Http\Interfaces;
 
 interface CoinRepositoryInterface
 {
-    public function getById(int $id)
+    public function getById(int $id);
 
 }

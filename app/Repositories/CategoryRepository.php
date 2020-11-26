@@ -12,6 +12,7 @@ namespace App\Repositories;
 
 
 use App\Exceptions\CategoryException;
+use App\Http\Interfaces\CoinRepositoryInterface;
 use Exception;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
