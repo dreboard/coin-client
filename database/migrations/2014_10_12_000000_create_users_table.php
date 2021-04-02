@@ -1,5 +1,6 @@
 <?php
 
+use Database\Seeders\UserSeeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
@@ -40,6 +41,9 @@ class CreateUsersTable extends Migration
                 'isAdmin' => 0
             ]
         );
+
+        $seeder = new UserSeeder();
+        $seeder->run();
     }
 
     /**

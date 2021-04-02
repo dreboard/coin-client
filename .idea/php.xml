@@ -2,12 +2,12 @@
 <project version="4">
   <component name="MessDetector">
     <phpmd_settings>
-      <MessDetectorConfiguration max_messages_per_file="100" tool_path="$PROJECT_DIR$/../../../xampp719/htdocs/_COINS/coin_mvc/vendor/bin/phpmd" />
+      <MessDetectorConfiguration tool_path="$PROJECT_DIR$/../../../xampp719/htdocs/_COINS/coin_mvc/vendor/bin/phpmd" />
     </phpmd_settings>
   </component>
   <component name="PhpCodeSniffer">
     <phpcs_settings>
-      <PhpCSConfiguration max_messages_per_file="100" standards="MySource;PEAR;PSR1;PSR2;Squiz;Zend" tool_path="$PROJECT_DIR$/../../../xampp719/htdocs/_COINS/coin_mvc/vendor/bin/phpcs" timeout="15000" />
+      <PhpCSConfiguration standards="MySource;PEAR;PSR1;PSR2;Squiz;Zend" tool_path="$PROJECT_DIR$/../../../xampp719/htdocs/_COINS/coin_mvc/vendor/bin/phpcs" timeout="15000" />
     </phpcs_settings>
   </component>
   <component name="PhpIncludePathManager">

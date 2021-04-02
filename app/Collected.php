@@ -52,7 +52,6 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $bie
  * @property User $user
  * @property CollectedDamage[] $collectedDamages
- * @property CollectedDamage[] $collectedDamages
  * @property CollectedImg[] $collectedImgs
  * @property CollectedPurchase[] $collectedPurchases
  * @property CollectedTraildie[] $collectedTraildies
@@ -62,7 +61,7 @@ class Collected extends Model
 {
     /**
      * The table associated with the model.
-     * 
+     *
      * @var string
      */
     protected $table = 'collected';
@@ -70,7 +69,51 @@ class Collected extends Model
     /**
      * @var array
      */
-    protected $fillable = ['userID', 'collectfolderID', 'collectrollsID', 'collectsetID', 'collectfirstdayID', 'mintsetID', 'varietysetID', 'setregID', 'coincollectID', 'containerID', 'coinLotID', 'coinID', 'coinNickname', 'coinGrade', 'coinGradeNum', 'problem', 'damaged', 'coinValue', 'listDate', 'listPrice', 'sellStatus', 'mintBox', 'auctionNumber', 'error', 'enterDate', 'firstday', 'certlist', 'certlistService', 'certlistDate', 'vam', 'snow', 'fsNum', 'fortin', 'sheldon', 'newcomb', 'wileyBugert', 'color', 'fullAtt', 'morganDesignation', 'toned', 'trailDie', 'viewable', 'locked', 'bie'];
+    protected $fillable = [
+        'userID',
+        'collectfolderID',
+        'collectrollsID',
+        'collectsetID',
+        'collectfirstdayID',
+        'mintsetID',
+        'varietysetID',
+        'setregID',
+        'coincollectID',
+        'containerID',
+        'coinLotID',
+        'coinID',
+        'coinNickname',
+        'coinGrade',
+        'coinGradeNum',
+        'problem',
+        'damaged',
+        'coinValue',
+        'listDate',
+        'listPrice',
+        'sellStatus',
+        'mintBox',
+        'auctionNumber',
+        'error',
+        'enterDate',
+        'firstday',
+        'certlist',
+        'certlistService',
+        'certlistDate',
+        'vam',
+        'snow',
+        'fsNum',
+        'fortin',
+        'sheldon',
+        'newcomb',
+        'wileyBugert',
+        'color',
+        'fullAtt',
+        'morganDesignation',
+        'toned',
+        'trailDie',
+        'viewable',
+        'locked',
+        'bie'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
@@ -88,13 +131,6 @@ class Collected extends Model
         return $this->hasMany('App\CollectedDamage');
     }
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function collectedDamages()
-    {
-        return $this->hasMany('App\CollectedDamage');
-    }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany

@@ -28,7 +28,7 @@ class CoinRepository
      * @param int $id
      * @return array
      */
-    public function getCoin(int $id)
+    public function coinsGetByID(int $id)
     {
         return DB::select('call CoinsGetByID(?)',array($id));
     }

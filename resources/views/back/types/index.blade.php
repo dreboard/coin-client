@@ -27,7 +27,7 @@
         </tr>
         </tbody>
     </table>
-    @includeIf("back.types.info.{$typeLink}", ['some' => 'data'])
+
     <hr>
     <!-- DataTables Example -->
     <div class="table-responsive">

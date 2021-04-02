@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Facades\App\Repositories\CoinVarietyRepository;
 use Facades\App\Repositories\CoinRepository;
 use Facades\App\Repositories\CoinYearRepository;
 use App\Repositories\CollectedRepository;
@@ -31,11 +32,12 @@ class CoinController extends Controller
     public function index(int $id)
     {
         try{
-            $coin = CoinRepository::getCoin($id);
+            $coin = CoinRepository::coinsGetByID($id);
             $varieties = CoinRepository::getCoinVarieties($id);
             $subTypes = CoinRepository::getSubTypes($id);
             $typeLink = str_replace(' ', '_', $coin[0]->coinType);
             $varietyList = CoinRepository::listCoinVarieties($id);
+
             return view('back.coins.index', [
                 'coin' => $coin,
                 'varieties' => $varieties,
@@ -77,14 +79,15 @@ class CoinController extends Controller
     public function add($id)
     {
         try{
-            $coin = CoinRepository::getCoin($id);
+            $coin = CoinRepository::coinsGetByID($id);
             $coins = CoinRepository::getCoins($id);
             $varieties = CoinRepository::getCoinVarieties($id);
             $subTypes = CoinRepository::getSubTypes($id);
-            //dd($subTypes);
+
             $typeLink = str_replace(' ', '_', $coin[0]->coinType);
             $varietyList = CoinRepository::listCoinVarieties($id);
-            $distinctVarieties = CoinRepository::getCoinDistinctVarieties($id);
+            $distinctVarieties = CoinVarietyRepository::getVarietyList($id);
+dd($distinctVarieties);
             return view('back.coins.add', [
                 'coin' => $coin,
                 'coins' => $coins,
