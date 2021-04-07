@@ -176,6 +176,8 @@ return [
         //App\Providers\TelescopeServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
+
+        App\Providers\CoinServiceProvider::class
     ],
 
     /*

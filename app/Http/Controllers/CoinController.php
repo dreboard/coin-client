@@ -26,27 +26,19 @@ class CoinController extends Controller
     }
 
     /**
+     * Load basic get coin page
      * @param int $id
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector|\Illuminate\View\View
      */
     public function index(int $id)
     {
         try{
-            $coin = CoinRepository::coinsGetByID($id);
-            $varieties = CoinRepository::getCoinVarieties($id);
-            $subTypes = CoinRepository::getSubTypes($id);
-            $typeLink = str_replace(' ', '_', $coin[0]->coinType);
-            $varietyList = CoinRepository::listCoinVarieties($id);
-
+            $coin = CoinRepository::getIndexPageArray($id);
             return view('back.coins.index', [
-                'coin' => $coin,
-                'varieties' => $varieties,
-                'typeLink' =>  $typeLink,
-                'subTypes' =>  $subTypes,
-                'varietyList' =>  $varietyList
+                'coin' => $coin
             ]);
         }catch (Throwable $e){
-            Log::error($e->getMessage());
+            Log::error($e->getMessage().''.$e->getFile().''.$e->getLine());
             return redirect('home')->with('status', 'Coin could not be found');
         }
 

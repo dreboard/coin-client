@@ -3,7 +3,13 @@
 namespace App\Repositories;
 
 
+use App\Http\Helpers\CoinHelper;
+use App\Http\Helpers\VarietyHelper;
+use App\Models\Coins\Coin;
+use App\Models\Coins\Variety;
+use App\Models\Index;
 use Exception;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
 
 /**
@@ -14,13 +20,35 @@ class CoinRepository
 {
 
     /**
+     * @var Coin
+     */
+    private Coin $coinModel;
+
+    public function __construct()
+    {
+        $this->coinModel = new Coin;
+        $this->coinVarietyModel = new Variety();
+    }
+
+    /**
      * @return array
      */
     public function getHomePage()
     {
-        return DB::select(
-            'SELECT * FROM ViewAllCategoriesList'
-        );
+        return $this->indexModel->getCategoriesList();
+    }
+
+    public function getIndexPageArray(int $id)
+    {
+        $coin = [];
+        $coin['info'] = $this->coinsGetByID($id);
+        //$coin['varieties'] = $this->getCoinVarieties($id);
+        $coin['varieties'] = VarietyHelper::filterVarietyOutput($coin['info'][0]->sub_types);
+        $coin['subTypes'] = $this->getSubTypes($id) ?? ['None'];
+        $coin['typeLink'] = str_replace(' ', '_', $coin['info'][0]->coinType);
+        $coin['varietyList'] = $this->coinVarietyGetByID($id); //$this->listCoinVarieties($id) ?? ['None'];
+        $coin['placeHolderNumber'] = rand(1,22);
+        return $coin;
     }
 
     /**
@@ -30,7 +58,17 @@ class CoinRepository
      */
     public function coinsGetByID(int $id)
     {
-        return DB::select('call CoinsGetByID(?)',array($id));
+        return $this->coinModel->getByID($id);
+        //return DB::select('call CoinsGetByID(?)',array($id));
+    }
+    /**
+     * Get all varieties by coin ID
+     * @param int $id
+     * @return array
+     */
+    public function coinVarietyGetByID(int $id)
+    {
+        return $this->coinVarietyModel->getByID($id);
     }
 
     /**
@@ -63,27 +101,31 @@ class CoinRepository
     }
 
     /**
-     * Get variety with same coinID
+     * Get variety with by coinID (DDO,RPM..)
      * @param int $id
      * @return array
      */
     public function listCoinVarieties(int $id)
     {
-        return DB::select('call CoinListDistinctVarietyById(?)',array($id));
+        $varieties_array = DB::select('call CoinListDistinctVarietyById(?)',array($id));
+        if(count($varieties_array) === 0){
+            return ['None'];
+        }
+        return $varieties_array;
     }
 
     /**
-     * Get sub types by coinID
+     * Get sub types by coinID (Large S, Fancy 5...)
      * @param int $id
      * @return array
      */
     public function getSubTypes(int $id)
     {
-        $sub = DB::select('call CoinListDistinctSubTypeById(?)', [$id]);
-        if(count($sub) === 0){
-            return [];
+        $sub_types_array = DB::select('call CoinListDistinctSubTypeById(?)', [$id]);
+        if(count($sub_types_array) === 0){
+            return ['None'];
         }
-        return $sub;
+        return VarietyHelper::filterVarietyOutput(Arr::pluck($sub_types_array, 'sub_type'));
     }
 
 

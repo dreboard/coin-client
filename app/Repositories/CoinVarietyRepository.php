@@ -10,19 +10,35 @@
 
 namespace App\Repositories;
 
+use App\Models\Coins\Coin;
+use App\Models\Coins\Variety;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
 
 class CoinVarietyRepository
 {
 
+    /**
+     * @var Variety
+     */
+    private Variety $coinVarietyModel;
+
+    public function __construct()
+    {
+        $this->coinVarietyModel = new Variety();
+    }
 
     public function getVarietyList(int $id)
     {
         $varietyList = [];
-        $varietyList['list']      = $this::coinVarietyGetByID($id);
-        $varietyList['varieties'] = Arr::flatten($this::coinListDistinctVarietyByCoinId($id));
+        $varietyList['list']      = $this->coinVarietyModel->getByID($id);
+        $varietyList['varieties'] = Arr::flatten($this->coinVarietyModel->listDistinctVarietyByCoinId($id));
         return $varietyList;
+    }
+
+    public function getVarietyByType(int $id, string $variety)
+    {
+        return $this->coinVarietyModel->getAllVarietyByCoinID($variety, $id);
     }
 
     /**
@@ -32,7 +48,7 @@ class CoinVarietyRepository
      */
     public function coinVarietyGetByID(int $id)
     {
-        return DB::select('call CoinVarietyGetByID(?)',array($id));
+        return $this->coinVarietyModel->getByID($id);
     }
 
 
@@ -43,7 +59,7 @@ class CoinVarietyRepository
      */
     public function coinListDistinctVarietyByCoinId(int $id)
     {
-        return DB::select('call CoinListDistinctVarietyByCoinId(?)',array($id));
+        return $this->coinVarietyModel->listDistinctVarietyByCoinId($id);
 
     }
 

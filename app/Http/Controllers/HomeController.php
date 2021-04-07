@@ -2,25 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use App\Repositories\CoinRepository;
+use App\Repositories\HomeRepository;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     /**
-     * @var CoinRepository
+     * @var HomeRepository
      */
-    private $coinRepository;
+    private $homeRepository;
 
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct(CoinRepository $coinRepository)
+    public function __construct()
     {
         $this->middleware('auth');
-        $this->coinRepository = $coinRepository;
+        $this->homeRepository = new HomeRepository;
     }
 
     /**
@@ -30,7 +30,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $cats = $this->coinRepository->getHomePage();
+        $cats = $this->homeRepository->getHomePage();
         return view('back.home', ['cats' => $cats]);
     }
 

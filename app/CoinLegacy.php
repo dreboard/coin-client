@@ -45,7 +45,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property CoinType $cointype
  * @property CoinCollected $collectcoins
  */
-class Coin extends Model
+class CoinLegacy extends Model
 {
     /**
      * @var array

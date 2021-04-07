@@ -6,7 +6,6 @@
 
 
 
-
 <div class="card mb-4">
     <div class="card-header">
         <i class="fas fa-table mr-1"></i>
@@ -36,7 +35,7 @@
                 </tr>
                 </tfoot>
                 <tbody>
-                @foreach ($varieties as $variety)
+                @foreach ($coin['varietyList'] as $variety)
                     <tr>
                         <td><a href="{{ route('coins.variety', ['id' => $variety->id]) }}">{{ $variety->sub_type }}</a></td>
                         <td><a href="{{ route('coins.variety', ['id' => $variety->id]) }}">{{ $variety->variety }}</a></td>
