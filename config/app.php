@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Coin App'),
 
     /*
     |--------------------------------------------------------------------------
@@ -53,6 +53,13 @@ return [
     */
 
     'url' => env('APP_URL', 'http://localhost'),
+
+    'api_url' => env('API_URL', 'http://localhost/coins/coins-api/public/api/'),
+
+    'analytics_tag' => env('GOOGLE_ANALYTICS_TAG', 'UA-104186490-2'),
+    'analytics_4_tag' => env('GOOGLE_ANALYTICS_4_TAG', 'G-EM5RKRXHD8'),
+
+
 
     'asset_url' => env('ASSET_URL', null),
 

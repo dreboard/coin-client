@@ -7,7 +7,7 @@
             <a href="{{ route('home', ['id' => $typeInfo[0]->cat_id]) }}">All</a>
         </li>
         <li class="breadcrumb-item">
-            <a href="{{ route('categories', ['id' => $typeInfo[0]->cat_id]) }}">{{ $typeInfo[0]->coinCategory }}</a>
+            <a href="{{ route('category.view', ['id' => $typeInfo[0]->cat_id]) }}">{{ $typeInfo[0]->coinCategory }}</a>
         </li>
         <li class="breadcrumb-item active">{{ $typeInfo[0]->coinType }}</li>
     </ol>

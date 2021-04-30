@@ -6,6 +6,7 @@ use Facades\App\Repositories\CoinVarietyRepository;
 use Facades\App\Repositories\CoinRepository;
 use Facades\App\Repositories\CoinYearRepository;
 use App\Repositories\CollectedRepository;
+use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Throwable;
@@ -16,13 +17,14 @@ use Throwable;
  */
 class CoinController extends Controller
 {
+    private Client $client;
 
     /**
      * CoinController constructor.
      */
     public function __construct()
     {
-
+        $this->client = new Client(['base_uri' => env('API_URL')]);
     }
 
     /**
@@ -33,7 +35,13 @@ class CoinController extends Controller
     public function index(int $id)
     {
         try{
+            $response = $this->client->request('POST', 'coins/view', ['form_params' => [
+                'id' => $id,
+                'job' => 'Full Stack Dev'
+            ]]);
+
             $coin = CoinRepository::getIndexPageArray($id);
+
             return view('back.coins.index', [
                 'coin' => $coin
             ]);
@@ -43,6 +51,24 @@ class CoinController extends Controller
         }
 
     }
+
+    public function coinID(int $id)
+    {
+        try {
+            $response = $this->client->request('POST', 'coins/view', ['form_params' => [
+                'id' => $id,
+            ]]);
+            $coin = json_decode($response->getBody(), true);
+            return view('back.coins.index', [
+                'coin' => $coin['coin']
+            ]);
+        }catch (Throwable $e){
+            Log::error($e->getMessage());
+            return redirect('home')->with('status', 'The requested coin was not found');
+        }
+
+    }
+
 
     /**
      * @param int $id

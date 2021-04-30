@@ -20,9 +20,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/category/{id}', 'CategoryController@index')->name('categories');
 
-
-Route::get('/types/{id}', 'TypeController@index')->name('types');
 
 

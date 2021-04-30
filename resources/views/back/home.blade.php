@@ -214,8 +214,8 @@
             <tbody>
             @foreach ($cats as $cat)
                 <tr>
-                    <td><a href="{{ route('categories', ['id' => $cat->id]) }}"><img src="http://cdn.dev-php.site/public/img/coins/{!! str_replace(' ', '_', $cat->coinCategory) !!}.jpg" style="width: 40px; height: auto;" class="logo"></a></td>
-                    <td><a href="{{ route('categories', ['id' => $cat->id]) }}">{{ $cat->coinCategory }}</a></td>
+                    <td><a href="{{ route('category.view', ['id' => $cat->id]) }}"><img src="http://cdn.dev-php.site/public/img/coins/{!! str_replace(' ', '_', $cat->coinCategory) !!}.jpg" style="width: 40px; height: auto;" class="logo"></a></td>
+                    <td><a href="{{ route('category.view', ['id' => $cat->id]) }}">{{ $cat->coinCategory }}</a></td>
                     <td>{{ $cat->id }}</td>
                     <td>53</td>
                     <td>2009/10/22</td>

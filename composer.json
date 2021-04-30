@@ -10,9 +10,17 @@
     "require": {
         "php": "^8.0",
         "fideloper/proxy": "^4.4",
+        "guzzlehttp/guzzle": "^6",
         "laravel/framework": "^8.0",
         "laravel/telescope": "^4.x-dev",
-        "laravel/ui": "^3.x-dev"
+        "laravel/ui": "^3.x-dev",
+        "dts/ebay-sdk-php": "*",
+        "hkonnet/laravel-ebay": "*",
+        "google/apiclient": "*",
+        "ext-simplexml": "*",
+        "ext-curl": "*",
+        "ext-libxml": "*",
+        "ext-json": "*"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3",

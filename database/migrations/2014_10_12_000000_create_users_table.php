@@ -8,12 +8,17 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateUsersTable extends Migration
 {
+
+    public function up()
+    {
+
+    }
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up()
+    public function up2()
     {
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');

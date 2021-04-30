@@ -9,14 +9,14 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
             <h6 class="dropdown-header">Pages:</h6>
-            <a class="dropdown-item" href="{{ route('coins.view', ['id' => $coin['info'][0]->id]) }}">Errors</a>
-            @if(in_array($coin['info'][0]->coinType, config('coins.colorTypes')))
-                <a class="dropdown-item" href="{{ route('coins.view', ['id' => $coin['info'][0]->id]) }}">Color</a>
+            <a class="dropdown-item" href="{{ route('coins.view', ['id' => $coin['info'][0]['id']]) }}">Errors</a>
+            @if(in_array($coin['info'][0]['coinType'], config('coins.colorTypes')))
+                <a class="dropdown-item" href="{{ route('coins.view', ['id' => $coin['info'][0]['id']]) }}">Color</a>
             @endif
 
 
-            <a class="dropdown-item" href="{{ route('coins.view', ['id' => $coin['info'][0]->id]) }}">Varieties</a>
-            <a class="dropdown-item" href="{{ route('coins.view', ['id' => $coin['info'][0]->id]) }}">Grade</a>
+            <a class="dropdown-item" href="{{ route('coins.view', ['id' => $coin['info'][0]['id']]) }}">Varieties</a>
+            <a class="dropdown-item" href="{{ route('coins.view', ['id' => $coin['info'][0]['id']]) }}">Grade</a>
             <div class="dropdown-divider"></div>
             <h6 class="dropdown-header">Other Pages:</h6>
             <a class="dropdown-item" href="404.html">404 Page</a>
@@ -32,13 +32,13 @@
 
         <ol class="breadcrumb mb-4">
             <li class="breadcrumb-item">
-                <a href="{{ route('categories', ['id' => $coin['info'][0]->cat_id]) }}">{{ $coin['info'][0]->coinCategory }}</a>
+                <a href="{{ route('category.view', ['id' => $coin['info'][0]['cat_id']]) }}">{{ $coin['info'][0]['coinCategory'] }}</a>
             </li>
             <li class="breadcrumb-item">
-                <a href="{{ route('types', ['id' => $coin['info'][0]->type_id]) }}">{{ $coin['info'][0]->coinType }}</a>
+                <a href="{{ route('type.view', ['id' => $coin['info'][0]['type_id']]) }}">{{ $coin['info'][0]['coinType'] }}</a>
             </li>
             <li class="breadcrumb-item active">
-                <a href="{{ route('coins.view', ['id' => $coin['info'][0]->id]) }}">{{ $coin['info'][0]->coinName }}</a>
+                <a href="{{ route('coins.view', ['id' => $coin['info'][0]['id']]) }}">{{ $coin['info'][0]['coinName'] }}</a>
             </li>
         </ol>
 
@@ -155,20 +155,20 @@
                         @foreach ($varietyList as $variety)
                             <tr>
                                 <td>
-                                    <a href="{{ route('coins.variety', ['id' => $variety->id]) }}">{{ $variety->sub_type }}</a>
+                                    <a href="{{ route('coins.variety_by_id', ['id' => $variety['id']]) }}">{{ $variety['sub_type'] }}</a>
                                 </td>
                                 <td><a href="{{ route('coins.varietyType', [
-                                                                        'variety' => $variety->variety,
-                                                                        'id' => $variety->coin_id
-                                                                        ]) }}">{{ $variety->variety }}</a></td>
+                                                                        'variety' => $variety['variety'],
+                                                                        'id' => $variety['coin_id']
+                                                                        ]) }}">{{ $variety['variety'] }}</a></td>
                                 <td>
-                                    <a href="{{ route('coins.variety', ['id' => $variety->id]) }}">{{ $variety->label }}</a>
+                                    <a href="{{ route('coins.variety', ['id' => $variety['id']]) }}">{{ $variety['label'] }}</a>
                                 </td>
                                 <td>
-                                    <a href="{{ route('coins.variety', ['id' => $variety->id]) }}">{{ $variety->designation }}</a>
+                                    <a href="{{ route('coins.variety', ['id' => $variety['id']]) }}">{{ $variety['designation'] }}</a>
                                 </td>
                                 <td>
-                                    <a href="{{ route('coins.variety', ['id' => $variety->id]) }}">{{ $variety->grouping }}</a>
+                                    <a href="{{ route('coins.variety', ['id' => $variety['id']]) }}">{{ $variety['grouping'] }}</a>
                                 </td>
                             </tr>
                         @endforeach

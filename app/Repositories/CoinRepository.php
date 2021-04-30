@@ -41,13 +41,14 @@ class CoinRepository
     public function getIndexPageArray(int $id)
     {
         $coin = [];
-        $coin['info'] = $this->coinsGetByID($id);
+        $coin['info'] = $this->coinGetByID($id);
         //$coin['varieties'] = $this->getCoinVarieties($id);
         $coin['varieties'] = VarietyHelper::filterVarietyOutput($coin['info'][0]->sub_types);
         $coin['subTypes'] = $this->getSubTypes($id) ?? ['None'];
         $coin['typeLink'] = str_replace(' ', '_', $coin['info'][0]->coinType);
         $coin['varietyList'] = $this->coinVarietyGetByID($id); //$this->listCoinVarieties($id) ?? ['None'];
         $coin['placeHolderNumber'] = rand(1,22);
+        $coin['collected'] = [];
         return $coin;
     }
 
@@ -56,7 +57,7 @@ class CoinRepository
      * @param int $id
      * @return array
      */
-    public function coinsGetByID(int $id)
+    public function coinGetByID(int $id)
     {
         return $this->coinModel->getByID($id);
         //return DB::select('call CoinsGetByID(?)',array($id));
@@ -68,7 +69,7 @@ class CoinRepository
      */
     public function coinVarietyGetByID(int $id)
     {
-        return $this->coinVarietyModel->getByID($id);
+        return $this->coinVarietyModel->getByCoinID($id);
     }
 
     /**

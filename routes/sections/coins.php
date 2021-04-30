@@ -14,12 +14,16 @@ Route::get('/coin', function () {
 });
 
 Route::group(['prefix' => 'coins', 'as' => 'coins.'], function () {
-    Route::get('/view/{id}', 'CoinController@index')->name('view');
+    Route::get('/view/{id}', 'CoinController@coinID')->name('view');
     Route::get('/year', 'CoinController@coinsByYear')->name('year');
     Route::get('/form', 'CoinController@add')->name('form');
     Route::get('/add/{id}', 'CoinController@add')->name('add');
 
+    Route::get('/variety_by_id/{id}', 'CoinVarietyController@viewByID')->name('variety_by_id');
     Route::get('/variety/{id}', 'CoinVarietyController@index')->name('variety');
     Route::get('/varietyType/{variety}/{id}', 'CoinVarietyController@byType')->name('varietyType');
+
+
+
 
 });

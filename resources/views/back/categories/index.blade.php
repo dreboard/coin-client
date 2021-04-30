@@ -41,8 +41,8 @@
             <tbody>
             @foreach ($types as $k => $type)
                 <tr>
-                    <td><a href="{{ route('types', ['id' => $type['id']]) }}"><img src="http://cdn.dev-php.site/public/img/coins/{!! str_replace(' ', '_', $type['coinType']) !!}.jpg" style="width: 40px; height: auto;" class="logo"></a></td>
-                    <td class="w-75"><a href="{{ route('types', ['id' => $type['id']]) }}">{{ $type['coinType'] }}</a></td>
+                    <td><a href="{{ route('type.view', ['id' => $type['id']]) }}"><img src="http://cdn.dev-php.site/public/img/coins/{!! str_replace(' ', '_', $type['coinType']) !!}.jpg" style="width: 40px; height: auto;" class="logo"></a></td>
+                    <td class="w-75"><a href="{{ route('type.view', ['id' => $type['id']]) }}">{{ $type['coinType'] }}</a></td>
                     <td>{{ $type['details'][0]->typeCount }}</td>
                     <td>${{ $type['details'][0]->typeInvest }}</td>
                 </tr>

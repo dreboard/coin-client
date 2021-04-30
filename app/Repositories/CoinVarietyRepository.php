@@ -33,6 +33,16 @@ class CoinVarietyRepository
         $varietyList = [];
         $varietyList['list']      = $this->coinVarietyModel->getByID($id);
         $varietyList['varieties'] = Arr::flatten($this->coinVarietyModel->listDistinctVarietyByCoinId($id));
+        $varietyList['collected'] = [];
+        return $varietyList;
+    }
+
+    public function getSubTypeList(int $id)
+    {
+        $varietyList = [];
+        $varietyList['list']      = $this->coinVarietyModel->getByID($id);
+        $varietyList['varieties'] = Arr::flatten($this->coinVarietyModel->listDistinctVarietyByCoinId($id));
+        $varietyList['collected'] = [];
         return $varietyList;
     }
 
@@ -49,6 +59,16 @@ class CoinVarietyRepository
     public function coinVarietyGetByID(int $id)
     {
         return $this->coinVarietyModel->getByID($id);
+    }
+
+    /**
+     * Get all varieties by coin ID
+     * @param int $id
+     * @return array
+     */
+    public function coinVarietyGetByCoinID(int $id)
+    {
+        return $this->coinVarietyModel->getByCoinID($id);
     }
 
 

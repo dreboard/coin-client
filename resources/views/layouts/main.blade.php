@@ -19,9 +19,36 @@
     <!-- Custom styles for this template-->
     <link href="{{ asset('css/sb-admin.css') }}" rel="stylesheet">
     @stack('styles')
-    <style>
 
-    </style>
+    <script type="text/javascript">
+        var ENVIRONMENT = {{config('app.env')}};
+        var GROUP_ID = "web_default";
+        var PROCESS_ID = "20059";
+        var REVISION = {{ \App\Http\Helpers\SiteHelper::gitVersions() }};
+        var ACTIVE_RENEWAL = "01";
+        var USER_ID = "1";
+        var USER_IP_ADD = {{ $_SERVER['REMOTE_ADDR'] }};
+    </script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{config('app.analytics_tag')}}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '{{config('app.analytics_tag')}}',{'debug_mode':true});
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics 4-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{config('app.analytics_4_tag')}}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '{{config('app.analytics_4_tag')}}');
+    </script>
+
 
 </head>
 
@@ -96,6 +123,12 @@
     <div id="content-wrapper">
 
         <div id="app" class="container-fluid">
+            @if (session('status'))
+                <div class="alert alert-success" role="alert">
+                    {{ session('status') }}
+                </div>
+            @endif
+
             @yield('content')
         </div>
         <!-- /.container-fluid -->
@@ -104,7 +137,7 @@
         <footer class="sticky-footer">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright © Your Website 2019</span>
+                    <span>Copyright © Your Website {{ date('Y') }}</span>
                 </div>
             </div>
         </footer>
@@ -154,6 +187,7 @@
 <script src="{{ asset('vendor/datatables/dataTables.bootstrap4.js') }}"></script>
 <!-- Custom scripts for all pages-->
 <script src="{{ asset('js/sb-admin.js') }}"></script>
+<script src="{{ asset('js/analytics.js') }}"></script>
 @stack('scripts')
 </body>
 
