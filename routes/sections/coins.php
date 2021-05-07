@@ -2,6 +2,7 @@
 
 // Coins
 use App\Coin;
+use App\Http\Controllers\CoinController;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use App\Http\Resources\Coin as CoinResource;
@@ -24,6 +25,6 @@ Route::group(['prefix' => 'coins', 'as' => 'coins.'], function () {
     Route::get('/varietyType/{variety}/{id}', 'CoinVarietyController@byType')->name('varietyType');
 
 
-
+    Route::get('/grade/{id}', [CoinController::class, 'gradesByID'])->name('grade');
 
 });

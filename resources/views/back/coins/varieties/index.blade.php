@@ -28,10 +28,10 @@
     <!-- Page Content -->
     <ol class="breadcrumb">
         <li class="breadcrumb-item">
-            <a href="{{ route('categories', ['id' => $coin['info'][0]->cat_id]) }}">{{ $coin['info'][0]->coinCategory }}</a>
+            <a href="{{ route('category.view', ['id' => $coin['info'][0]->cat_id]) }}">{{ $coin['info'][0]->coinCategory }}</a>
         </li>
         <li class="breadcrumb-item">
-            <a href="{{ route('types', ['id' => $coin['info'][0]->type_id]) }}">{{ $coin['info'][0]->coinType }}</a>
+            <a href="{{ route('type.view', ['id' => $coin['info'][0]->type_id]) }}">{{ $coin['info'][0]->coinType }}</a>
         </li>
         <li class="breadcrumb-item active">
             <a href="{{ route('coins.view', ['id' => $coin['info'][0]->coin_id]) }}">{{ $coin['info'][0]->coinName }}</a>

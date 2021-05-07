@@ -27,30 +27,6 @@ class CoinController extends Controller
         $this->client = new Client(['base_uri' => env('API_URL')]);
     }
 
-    /**
-     * Load basic get coin page
-     * @param int $id
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector|\Illuminate\View\View
-     */
-    public function index(int $id)
-    {
-        try{
-            $response = $this->client->request('POST', 'coins/view', ['form_params' => [
-                'id' => $id,
-                'job' => 'Full Stack Dev'
-            ]]);
-
-            $coin = CoinRepository::getIndexPageArray($id);
-
-            return view('back.coins.index', [
-                'coin' => $coin
-            ]);
-        }catch (Throwable $e){
-            Log::error($e->getMessage().''.$e->getFile().''.$e->getLine());
-            return redirect('home')->with('status', 'Coin could not be found');
-        }
-
-    }
 
     public function coinID(int $id)
     {
@@ -119,6 +95,24 @@ dd($distinctVarieties);
             Log::error($e->getMessage());
             return redirect('home')->with('status', 'Coin could not be added');
         }
+    }
+
+
+    public function gradesByID(int $id)
+    {
+        try {
+            $response = $this->client->request('POST', 'coins/view', ['form_params' => [
+                'id' => $id,
+            ]]);
+            $coin = json_decode($response->getBody(), true);
+            return view('back.reports.grade', [
+                'coin' => $coin['coin']
+            ]);
+        }catch (Throwable $e){
+            Log::error($e->getMessage());
+            return redirect('home')->with('status', 'The requested coin was not found');
+        }
+
     }
 
 }

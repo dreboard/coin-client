@@ -35,6 +35,11 @@ abstract class CoinHelper
         return ['Seated Liberty Half Dime', 'Seated Liberty Dime', 'Seated Liberty Quarter', 'Seated Liberty Half Dollar', 'Seated Liberty Dollar'];
     }
 
+    public static function gradePrefix($strike)
+    {
+
+    }
+
     static public function collected(){
         return [
             0 => [

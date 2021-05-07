@@ -35,13 +35,11 @@ class CategoryController extends Controller
             $response = $this->client->request('POST', 'category/view', ['form_params' => [
                 'id' => $id,
             ]]);
-dd(json_decode($response->getBody(), true));
-            $category = CategoryRepository::getById($id);
-            $types = CategoryRepository::getTypeAllCache($id);
+            $data = json_decode($response->getBody(), true);
 
             return view('back.categories.index', [
-                'types' => $types,
-                'category' => $category
+                'types' => $data['types'],
+                'category' => $data['category']
             ]);
         }catch (Throwable $e){
             Log::error($e->getMessage());

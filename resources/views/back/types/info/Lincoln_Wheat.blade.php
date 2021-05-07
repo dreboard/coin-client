@@ -41,7 +41,7 @@
                                                                         ]) }}">{{ $variety['variety'] }}</a></td>
                         <td><a href="{{ route('coins.variety', ['id' => $variety['id']]) }}">{{ $variety['label'] }}</a></td>
                         <td><a href="{{ route('coins.variety', ['id' => $variety['id']]) }}">{{ $variety['designation'] }}</a></td>
-                        <td><a href="{{ route('coins.variety', ['id' => $variety['id']]) }}">{{ $variety['grouping'] }}</a></td>
+                        <td><a href="{{ route('coins.variety', ['id' => $variety['id']]) }}">{{ $variety['type'] }}</a></td>
                     </tr>
                 @endforeach
                 </tbody>
